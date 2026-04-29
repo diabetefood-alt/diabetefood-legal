@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité — DiabeteFood</title>
+<style>
+  :root { --orange:#F59E0B; --orange-dark:#D97706; --ink:#1F2937; --muted:#6B7280; --bg:#FFFBF5; --line:#FDE68A; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.65; }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 96px; }
+  h1 { color:var(--orange-dark); font-size: 2rem; margin-bottom: 4px; }
+  h2 { color:var(--ink); font-size: 1.35rem; margin-top: 40px; padding-bottom: 6px; border-bottom: 2px solid var(--line); }
+  h3 { color:var(--ink); font-size: 1.05rem; margin-top: 24px; }
+  p, li { font-size: 1rem; }
+  .meta { color:var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+  table { width:100%; border-collapse: collapse; margin: 12px 0 24px; font-size: 0.95rem; }
+  th, td { text-align:left; padding: 10px 12px; border-bottom: 1px solid #F3E8C2; vertical-align: top; }
+  th { background: #FEF3C7; color: var(--orange-dark); }
+  a { color: var(--orange-dark); }
+  .footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color:var(--muted); font-size:0.9rem; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Politique de confidentialité — DiabeteFood</h1>
+<p class="meta">Dernière mise à jour : 30 avril 2026</p>
+
+<p>Bienvenue sur DiabeteFood. La présente politique explique comment l'application iOS DiabeteFood (« nous », « notre app ») collecte, utilise et protège tes données personnelles. Elle est rédigée pour être claire et conforme au Règlement Général sur la Protection des Données (RGPD) ainsi qu'aux exigences de l'App Store d'Apple.</p>
+
+<h2>1. Qui sommes-nous ?</h2>
+<p>L'application DiabeteFood est éditée à titre personnel par <strong>Raphael Kibassa</strong>.</p>
+<p>Contact : <a href="mailto:raphaelkibassa1997@gmail.com">raphaelkibassa1997@gmail.com</a></p>
+
+<h2>2. Quelles données collectons-nous ?</h2>
+<p>DiabeteFood est conçue avec une approche <strong>« privacy-first »</strong> : la majorité de tes données restent <strong>stockées localement sur ton iPhone</strong> (base SwiftData de l'app). Aucune donnée n'est partagée avec des tiers à des fins publicitaires ou de profilage.</p>
+
+<h3>2.1 Données stockées uniquement sur ton appareil</h3>
+<p>Les éléments suivants ne quittent jamais ton iPhone, sauf pour les besoins ponctuels d'analyse décrits en section 2.2 :</p>
+<ul>
+  <li><strong>Profil utilisateur</strong> : prénom, type de diabète, valeurs cibles d'HbA1c, objectifs.</li>
+  <li><strong>Données de santé</strong> : type de diabète, niveau de glycémie ressenti, suivi des repas.</li>
+  <li><strong>Photos de repas</strong> : capturées via l'appareil photo ou importées depuis ta photothèque.</li>
+  <li><strong>Journal des repas</strong> : entrées, scores nutritionnels, notes, scans de codes-barres récents.</li>
+  <li><strong>Historique de chat</strong> : messages échangés avec le coach IA.</li>
+  <li><strong>Progression</strong> : XP, badges, streaks, niveaux du système de récompense.</li>
+</ul>
+
+<h3>2.2 Données transmises ponctuellement à nos sous-traitants</h3>
+<p>Pour analyser un repas (photo) ou un produit (code-barres), nous transmettons temporairement les données suivantes à nos sous-traitants techniques :</p>
+<table>
+  <thead><tr><th>Donnée</th><th>Destinataire</th><th>Finalité</th></tr></thead>
+  <tbody>
+    <tr><td>Image du repas (compressée, anonymisée)</td><td>Anthropic (API Claude) via un proxy Cloudflare</td><td>Analyse nutritionnelle par IA</td></tr>
+    <tr><td>Texte de question (chat IA)</td><td>Anthropic (API Claude) via un proxy Cloudflare</td><td>Réponse du coach IA</td></tr>
+    <tr><td>Code-barres EAN/UPC</td><td>OpenFoodFacts (base de données ouverte)</td><td>Récupération des informations produit</td></tr>
+  </tbody>
+</table>
+<p>Ces requêtes ne sont <strong>pas associées à ton identité</strong> : aucune information identifiante (prénom, identifiant Apple, e-mail) n'est jointe.</p>
+
+<h3>2.3 Données collectées par Apple (App Store / StoreKit)</h3>
+<p>Si tu souscris à un abonnement Premium, <strong>Apple</strong> gère intégralement la transaction (paiement, renouvellement, remboursement). Nous ne recevons jamais ton numéro de carte bancaire ni ton Apple ID. Apple nous communique uniquement le statut de ton abonnement (actif / expiré).</p>
+
+<h2>3. Pourquoi ces données ?</h2>
+<table>
+  <thead><tr><th>Finalité</th><th>Base légale (RGPD art. 6)</th></tr></thead>
+  <tbody>
+    <tr><td>Personnaliser tes conseils nutritionnels selon ton profil santé</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+    <tr><td>Analyser tes photos de repas (Claude IA)</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+    <tr><td>Analyser des codes-barres (OpenFoodFacts)</td><td>Intérêt légitime (art. 6.1.f)</td></tr>
+    <tr><td>Gérer la progression (XP, badges, streaks)</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+    <tr><td>Gérer ton abonnement Premium</td><td>Exécution du contrat (art. 6.1.b)</td></tr>
+  </tbody>
+</table>
+
+<h2>4. Avec qui partageons-nous tes données ?</h2>
+<p>Nous <strong>ne vendons pas tes données</strong>. Nous <strong>n'utilisons aucun outil publicitaire</strong> ni de tracking inter-applications. Aucun SDK marketing tiers n'est intégré dans l'app.</p>
+<p>Sous-traitants strictement nécessaires :</p>
+<ul>
+  <li><strong>Anthropic, PBC</strong> (États-Unis) — API Claude IA. <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Politique</a></li>
+  <li><strong>Cloudflare, Inc.</strong> (États-Unis) — proxy technique pour appeler l'API Claude. <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Politique</a></li>
+  <li><strong>Open Food Facts</strong> (France) — base de données nutritionnelle ouverte. <a href="https://world.openfoodfacts.org/terms-of-use" target="_blank" rel="noopener">Politique</a></li>
+  <li><strong>Apple Inc.</strong> (États-Unis) — distribution de l'app et facturation des abonnements. <a href="https://www.apple.com/legal/privacy/fr-ww/" target="_blank" rel="noopener">Politique</a></li>
+</ul>
+<p>Les transferts hors UE vers les États-Unis sont encadrés par les <strong>Clauses Contractuelles Types</strong> (CCT) de la Commission européenne ou le <strong>Data Privacy Framework</strong>.</p>
+
+<h2>5. Combien de temps conservons-nous tes données ?</h2>
+<ul>
+  <li><strong>Données locales (sur ton iPhone)</strong> : conservées tant que l'app est installée. La désinstallation supprime immédiatement et définitivement toutes les données.</li>
+  <li><strong>Requêtes API Claude / OpenFoodFacts</strong> : non conservées de notre côté ; les sous-traitants suivent leurs propres durées de rétention (voir leurs politiques).</li>
+  <li><strong>Données d'abonnement (Apple)</strong> : conservées par Apple selon ses propres règles.</li>
+</ul>
+
+<h2>6. Tes droits (RGPD)</h2>
+<p>Conformément aux articles 15 à 22 du RGPD, tu disposes des droits suivants :</p>
+<ul>
+  <li><strong>Droit d'accès</strong> : obtenir une copie des données qui te concernent.</li>
+  <li><strong>Droit de rectification</strong> : corriger des données inexactes (modifiable directement dans le profil de l'app).</li>
+  <li><strong>Droit à l'effacement</strong> (« droit à l'oubli ») : désinstaller l'app supprime instantanément toutes tes données locales.</li>
+  <li><strong>Droit d'opposition</strong> : t'opposer au traitement à tout moment.</li>
+  <li><strong>Droit à la portabilité</strong> : récupérer tes données dans un format structuré.</li>
+  <li><strong>Droit de retirer ton consentement</strong> à tout moment.</li>
+</ul>
+<p>Pour exercer ces droits : <a href="mailto:raphaelkibassa1997@gmail.com">raphaelkibassa1997@gmail.com</a></p>
+<p>Tu peux aussi déposer une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener">cnil.fr/fr/plaintes</a></p>
+
+<h2>7. Sécurité</h2>
+<p>Tes données locales sont protégées par le chiffrement matériel d'iOS (Data Protection API). Les communications réseau utilisent <strong>HTTPS / TLS 1.2+</strong>. Aucune information identifiante n'est jointe aux requêtes IA.</p>
+
+<h2>8. Mineurs</h2>
+<p>DiabeteFood n'est pas destinée aux enfants de moins de 13 ans. Si tu es âgé de moins de 16 ans, l'utilisation de l'app doit se faire avec l'accord d'un titulaire de l'autorité parentale.</p>
+
+<h2>9. Modifications</h2>
+<p>Cette politique peut être mise à jour. La date « Dernière mise à jour » en haut de page reflète la dernière modification. Les changements substantiels seront notifiés via une mise à jour de l'app.</p>
+
+<h2>10. Contact</h2>
+<p><strong>Raphael Kibassa</strong><br>
+E-mail : <a href="mailto:raphaelkibassa1997@gmail.com">raphaelkibassa1997@gmail.com</a></p>
+
+<div class="footer">
+  <p><em>DiabeteFood n'est pas un dispositif médical. Les conseils fournis ne remplacent pas l'avis d'un médecin, d'un endocrinologue ou d'un nutritionniste. En cas de doute sur ta santé, consulte un professionnel.</em></p>
+</div>
+
+</main>
+</body>
+</html>
