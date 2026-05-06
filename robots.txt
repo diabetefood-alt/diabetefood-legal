@@ -1,0 +1,8 @@
+# DiabeteFood — Robots configuration
+# Allow all search engines to index everything
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://diabetefood.com/sitemap.xml
