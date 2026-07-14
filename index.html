@@ -6,7 +6,7 @@
 
   <!-- ===== SEO ===== -->
   <title>DiabeteFood — Application diabète : scanner alimentaire et journal nutritionnel</title>
-  <meta name="description" content="DiabeteFood est une application gratuite pour personnes diabétiques de type 1 et type 2. Scannez vos produits, photographiez vos repas, obtenez un score adapté à votre diabète et un index glycémique pour chaque aliment. Disponible sur iPhone et Android." />
+  <meta name="description" content="DiabeteFood est une application pour personnes diabétiques de type 1 et type 2. Scannez vos produits, photographiez vos repas, obtenez un score adapté à votre diabète et un index glycémique pour chaque aliment. 14 jours d'essai gratuit. iPhone et Android." />
   <meta name="keywords" content="diabète, application diabète, scanner alimentaire, scanner code-barres alimentaire, diabète type 1, diabète type 2, index glycémique, glycémie, application nutrition diabétique, journal alimentaire, suivi alimentaire diabète, IA nutrition, Yuka diabète" />
   <meta name="author" content="DiabeteFood" />
   <meta name="robots" content="index, follow" />
@@ -16,13 +16,13 @@
   <meta name="geo.region" content="FR" />
   <meta name="language" content="French" />
 
-  <!-- ===== Open Graph (Facebook, LinkedIn, WhatsApp) ===== -->
+  <!-- ===== Open Graph ===== -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:site_name" content="DiabeteFood" />
   <meta property="og:url" content="https://diabetefood.com/" />
   <meta property="og:title" content="DiabeteFood — Application diabète : scanner et journal nutritionnel" />
-  <meta property="og:description" content="Scannez vos produits, photographiez vos repas, obtenez un score adapté à votre diabète. Disponible sur iPhone et Android." />
+  <meta property="og:description" content="Scannez vos produits, photographiez vos repas, obtenez un score adapté à votre diabète. 14 jours d'essai gratuit. iPhone et Android." />
   <meta property="og:image" content="https://diabetefood.com/app-icon.png" />
   <meta property="og:image:width" content="1024" />
   <meta property="og:image:height" content="1024" />
@@ -30,18 +30,48 @@
 
   <!-- ===== Twitter Card ===== -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="DiabeteFood — Application diabète gratuite" />
-  <meta name="twitter:description" content="Scanner d'aliments, journal de repas, score adapté à votre diabète. iPhone et Android." />
+  <meta name="twitter:title" content="DiabeteFood — Application diabète" />
+  <meta name="twitter:description" content="Scanner d'aliments, journal de repas, score adapté à votre diabète. 14 jours d'essai gratuit." />
   <meta name="twitter:image" content="https://diabetefood.com/app-icon.png" />
 
-  <!-- ===== Smart App Banner Apple (Safari iOS) ===== -->
+  <!-- ===== Smart App Banner Apple ===== -->
   <meta name="apple-itunes-app" content="app-id=6764684903" />
 
   <!-- ===== Favicon ===== -->
   <link rel="icon" type="image/png" href="app-icon.png" />
   <link rel="apple-touch-icon" href="app-icon.png" />
 
-  <!-- ===== JSON-LD Schema.org : MobileApplication ===== -->
+  <!-- ===================================================================== -->
+  <!-- ===== PIXEL META — "DiabeteFood Web" (ID 1046389911260321) =====      -->
+  <!--                                                                        -->
+  <!-- Sur mobile, cette page redirige vers le store en 600 ms. Le Pixel sert -->
+  <!-- au retargeting et au signal d'intention (Lead), PAS à l'optimisation   -->
+  <!-- sur l'achat : les abonnements ont lieu DANS l'app et remontent à Meta  -->
+  <!-- via AppsFlyer.                                                         -->
+  <!--                                                                        -->
+  <!-- NE JAMAIS envoyer de donnée de santé au Pixel (type de diabète,        -->
+  <!-- résultat de scan, glycémie) : interdit par les Conditions Meta, et     -->
+  <!-- c'est ce qui fait bloquer un compte publicitaire.                      -->
+  <!-- ===================================================================== -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1046389911260321');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1046389911260321&ev=PageView&noscript=1" alt="" />
+  </noscript>
+
+  <!-- ===== JSON-LD : MobileApplication ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,43 +80,24 @@
     "operatingSystem": "iOS, ANDROID",
     "applicationCategory": "HealthApplication",
     "applicationSubCategory": "Nutrition",
-    "description": "Application gratuite pour personnes diabétiques de type 1 et type 2. Scannez vos produits, photographiez vos repas, obtenez un score adapté à votre diabète et un index glycémique pour chaque aliment.",
+    "description": "Application pour personnes diabétiques de type 1 et type 2. Scannez vos produits, photographiez vos repas, obtenez un score adapté à votre diabète et un index glycémique pour chaque aliment. 14 jours d'essai gratuit.",
     "inLanguage": "fr",
     "url": "https://diabetefood.com/",
     "image": "https://diabetefood.com/app-icon.png",
     "offers": [
-      {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR",
-        "name": "Version gratuite"
-      },
-      {
-        "@type": "Offer",
-        "price": "4.99",
-        "priceCurrency": "EUR",
-        "name": "Premium mensuel"
-      },
-      {
-        "@type": "Offer",
-        "price": "34.99",
-        "priceCurrency": "EUR",
-        "name": "Premium annuel"
-      }
+      { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Version gratuite" },
+      { "@type": "Offer", "price": "14.99", "priceCurrency": "EUR", "name": "Premium mensuel" },
+      { "@type": "Offer", "price": "47.99", "priceCurrency": "EUR", "name": "Premium annuel" }
     ],
     "downloadUrl": [
       "https://apps.apple.com/app/diabetefood/id6764684903",
       "https://play.google.com/store/apps/details?id=com.diabetefood.scanner"
     ],
-    "author": {
-      "@type": "Organization",
-      "name": "DiabeteFood",
-      "url": "https://diabetefood.com/"
-    }
+    "author": { "@type": "Organization", "name": "DiabeteFood", "url": "https://diabetefood.com/" }
   }
   </script>
 
-  <!-- ===== JSON-LD Schema.org : Organization ===== -->
+  <!-- ===== JSON-LD : Organization ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -102,7 +113,7 @@
   }
   </script>
 
-  <!-- ===== JSON-LD Schema.org : FAQ ===== -->
+  <!-- ===== JSON-LD : FAQ ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -113,7 +124,15 @@
         "name": "DiabeteFood est-elle gratuite ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oui, DiabeteFood est gratuite : scan de codes-barres illimité, score basique, macros nutritionnels et historique. Une version Premium (4,99 €/mois ou 34,99 €/an) débloque le score Diabète personnalisé, le calculateur de portion, les conseils complets et l'estimation d'insuline."
+          "text": "L'application est gratuite à télécharger. Vous pouvez scanner autant de produits que vous voulez et votre première analyse complète est offerte, ainsi que 2 analyses photo de repas. Le Premium (14,99 €/mois ou 47,99 €/an, avec 14 jours d'essai gratuit) débloque les analyses illimitées, le score Diabète personnalisé, le calculateur de portion, les conseils complets et l'estimation d'insuline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Y a-t-il un essai gratuit ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. La formule annuelle inclut 14 jours d'essai gratuit. Vous n'êtes débité qu'à la fin de l'essai, et vous pouvez annuler à tout moment depuis Google Play ou l'App Store."
         }
       },
       {
@@ -162,10 +181,9 @@
       --text-primary: #2C1810;
       --text-muted: #8B7568;
       --border-orange: #FFE5CC;
+      --green: #2E7D32;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: linear-gradient(180deg, var(--surface-warm) 0%, var(--surface-peach) 100%);
@@ -173,224 +191,92 @@
       min-height: 100vh;
       line-height: 1.6;
     }
-
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 32px 24px 64px;
-    }
-
+    main { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
     .hero { text-align: center; padding: 24px 0; }
-
     .mascot {
-      width: 140px;
-      height: 140px;
-      display: block;
-      margin: 0 auto 16px;
-      border-radius: 32px;
-      animation: bounce 2.4s ease-in-out infinite;
+      width: 140px; height: 140px; display: block; margin: 0 auto 16px;
+      border-radius: 32px; animation: bounce 2.4s ease-in-out infinite;
       box-shadow: 0 12px 28px rgba(229, 114, 42, 0.28);
     }
-
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50%      { transform: translateY(-14px); }
     }
-
     h1 {
-      font-size: 42px;
-      font-weight: 800;
-      margin-bottom: 8px;
+      font-size: 42px; font-weight: 800; margin-bottom: 8px;
       background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-
-    .tagline {
-      font-size: 18px;
-      color: var(--text-muted);
-      margin-bottom: 32px;
+    .tagline { font-size: 18px; color: var(--text-muted); margin-bottom: 16px; }
+    .trial-badge {
+      display: inline-block; background: var(--green); color: white;
+      font-size: 14px; font-weight: 700; padding: 6px 16px;
+      border-radius: 100px; margin-bottom: 24px;
     }
-
-    h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 40px 0 16px;
-      color: var(--text-primary);
-    }
-
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin: 16px 0 8px;
-      color: var(--orange-dark);
-    }
-
+    h2 { font-size: 24px; font-weight: 700; margin: 40px 0 16px; color: var(--text-primary); }
+    h3 { font-size: 18px; font-weight: 600; margin: 16px 0 8px; color: var(--orange-dark); }
     p { margin-bottom: 12px; }
-
     .features {
-      background: white;
-      border: 1px solid var(--border-orange);
-      border-radius: 18px;
-      padding: 20px 24px;
-      margin: 24px 0;
+      background: white; border: 1px solid var(--border-orange);
+      border-radius: 18px; padding: 20px 24px; margin: 24px 0;
     }
-
     .features li {
-      list-style: none;
-      padding: 8px 0;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 15px;
+      list-style: none; padding: 8px 0; display: flex;
+      align-items: center; gap: 12px; font-size: 15px;
     }
-
     .features li::before {
-      content: "✓";
-      color: var(--orange-primary);
-      font-weight: 700;
-      font-size: 18px;
-      flex-shrink: 0;
+      content: "✓"; color: var(--orange-primary); font-weight: 700;
+      font-size: 18px; flex-shrink: 0;
     }
-
-    .buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin: 24px 0;
-    }
-
+    .buttons { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
     .store-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: #000;
-      color: white;
-      text-decoration: none;
-      padding: 16px 28px;
-      border-radius: 14px;
-      font-size: 16px;
-      font-weight: 600;
+      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+      background: #000; color: white; text-decoration: none;
+      padding: 16px 28px; border-radius: 14px; font-size: 16px; font-weight: 600;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
-
-    .store-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-    }
-
-    .store-btn svg {
-      width: 28px;
-      height: 28px;
-      flex-shrink: 0;
-    }
-
-    .store-btn .label {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      line-height: 1.1;
-    }
-
-    .store-btn .small {
-      font-size: 11px;
-      font-weight: 400;
-      opacity: 0.8;
-    }
-
-    .store-btn .big {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
+    .store-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); }
+    .store-btn svg { width: 28px; height: 28px; flex-shrink: 0; }
+    .store-btn .label { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; }
+    .store-btn .small { font-size: 11px; font-weight: 400; opacity: 0.8; }
+    .store-btn .big { font-size: 18px; font-weight: 600; }
     .info-card {
-      background: white;
-      border: 1px solid var(--border-orange);
-      border-radius: 14px;
-      padding: 18px 22px;
-      margin: 12px 0;
+      background: white; border: 1px solid var(--border-orange);
+      border-radius: 14px; padding: 18px 22px; margin: 12px 0;
     }
-
-    .price-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
-      margin: 16px 0;
-    }
-
+    .price-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0; }
     .price-card {
-      background: white;
-      border: 1px solid var(--border-orange);
-      border-radius: 14px;
-      padding: 16px;
-      text-align: center;
+      background: white; border: 1px solid var(--border-orange);
+      border-radius: 14px; padding: 16px; text-align: center;
     }
-
-    .price-card.popular {
-      border-color: var(--orange-primary);
-      border-width: 2px;
-      position: relative;
-    }
-
+    .price-card.popular { border-color: var(--orange-primary); border-width: 2px; position: relative; }
     .price-card.popular::before {
-      content: "POPULAIRE";
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--orange-primary);
-      color: white;
-      padding: 3px 12px;
-      border-radius: 10px;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      content: "POPULAIRE"; position: absolute; top: -10px; left: 50%;
+      transform: translateX(-50%); background: var(--orange-primary); color: white;
+      padding: 3px 12px; border-radius: 10px; font-size: 10px;
+      font-weight: 700; letter-spacing: 0.5px;
     }
-
-    .price-card .price {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--orange-dark);
-      margin: 8px 0;
+    .price-card .price { font-size: 22px; font-weight: 800; color: var(--orange-dark); margin: 8px 0; }
+    .price-card .freq { font-size: 12px; color: var(--text-muted); }
+    .price-card .save {
+      display: inline-block; background: var(--green); color: white;
+      font-size: 10px; font-weight: 700; padding: 2px 8px;
+      border-radius: 8px; margin-top: 6px;
     }
-
-    .price-card .freq {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
+    .legal-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 10px; }
     .footer {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 40px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border-orange);
-      text-align: center;
+      font-size: 13px; color: var(--text-muted); margin-top: 40px;
+      padding-top: 24px; border-top: 1px solid var(--border-orange); text-align: center;
     }
-
-    .footer a {
-      color: var(--orange-dark);
-      text-decoration: none;
-    }
-
+    .footer a { color: var(--orange-dark); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
-
     .redirect-msg {
-      display: none;
-      background: var(--orange-light);
-      border-radius: 12px;
-      padding: 14px 18px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: var(--text-primary);
-      text-align: center;
+      display: none; background: var(--orange-light); border-radius: 12px;
+      padding: 14px 18px; margin-bottom: 20px; font-size: 14px;
+      color: var(--text-primary); text-align: center;
     }
-
     .redirect-msg.show { display: block; }
-
     @media (max-width: 480px) {
       h1 { font-size: 34px; }
       h2 { font-size: 20px; }
@@ -405,6 +291,7 @@
       <img class="mascot" src="app-icon.png" alt="Logo DiabeteFood — assistant nutritionnel pour le diabète" />
       <h1>DiabeteFood</h1>
       <p class="tagline">L'application diabète qui rend l'alimentation simple — pour le type 1 et le type 2.</p>
+      <div class="trial-badge">14 jours d'essai gratuit</div>
     </header>
 
     <div id="redirect-msg" class="redirect-msg">
@@ -472,7 +359,7 @@
       <h3>Journal photo de repas avec analyse IA</h3>
       <p>
         Photographiez votre assiette : DiabeteFood identifie automatiquement les aliments, estime les portions
-        et calcule un score Diabète global. Trois analyses gratuites par jour, illimité avec Premium.
+        et calcule un score Diabète global. 2 analyses photo offertes, illimité avec Premium.
       </p>
     </div>
 
@@ -490,28 +377,42 @@
       <div class="price-card">
         <div class="freq">Version gratuite</div>
         <div class="price">0 €</div>
-        <div class="freq">Scanner illimité,<br>3 photos/jour</div>
+        <div class="freq">1 analyse complète offerte<br>+ 2 photos de repas</div>
       </div>
       <div class="price-card">
         <div class="freq">Premium mensuel</div>
-        <div class="price">4,99 €</div>
+        <div class="price">14,99 €</div>
         <div class="freq">par mois</div>
       </div>
       <div class="price-card popular">
         <div class="freq">Premium annuel</div>
-        <div class="price">34,99 €</div>
-        <div class="freq">par an<br>(−41 %)</div>
+        <div class="price">47,99 €</div>
+        <div class="freq">par an — soit 4,00 €/mois</div>
+        <div class="save">−73 %</div>
       </div>
     </div>
+    <p class="legal-note">
+      La formule annuelle inclut <strong>14 jours d'essai gratuit</strong>. Abonnement renouvelé
+      automatiquement, annulable à tout moment depuis Google Play ou l'App Store.
+    </p>
 
     <h2>Questions fréquentes</h2>
 
     <div class="info-card">
       <h3>DiabeteFood est-elle gratuite ?</h3>
       <p>
-        Oui. Le scan de codes-barres est illimité et gratuit, comme l'historique et les macros
-        nutritionnels. La version Premium débloque le score personnalisé, le calculateur de portion,
+        L'application est gratuite à télécharger. Vous pouvez scanner autant de produits que vous voulez,
+        votre <strong>première analyse complète est offerte</strong>, ainsi que 2 analyses photo de repas.
+        Le Premium débloque les analyses illimitées, le score Diabète personnalisé, le calculateur de portion,
         les conseils complets et l'estimation d'insuline.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <h3>Y a-t-il un essai gratuit ?</h3>
+      <p>
+        Oui. La formule annuelle inclut <strong>14 jours d'essai gratuit</strong>. Vous n'êtes débité
+        qu'à la fin de l'essai, et vous pouvez annuler à tout moment depuis Google Play ou l'App Store.
       </p>
     </div>
 
@@ -554,28 +455,32 @@
   </main>
 
   <script>
-    // Détection device & redirection automatique vers le bon store
+    // Détection device & redirection automatique vers le bon store.
+    // On laisse 600 ms au Pixel pour envoyer ses évènements avant de quitter la page.
     (function () {
       var ua = navigator.userAgent || navigator.vendor || window.opera;
       var iosUrl = "https://apps.apple.com/app/diabetefood/id6764684903";
       var androidUrl = "https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr";
       var msg = document.getElementById("redirect-msg");
 
-      // iOS (iPhone, iPad, iPod)
-      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+      function goToStore(url) {
         msg.classList.add("show");
-        setTimeout(function () { window.location.replace(iosUrl); }, 600);
-        return;
+        if (typeof fbq === "function") { fbq('track', 'Lead'); }
+        setTimeout(function () { window.location.replace(url); }, 600);
       }
 
-      // Android
-      if (/android/i.test(ua)) {
-        msg.classList.add("show");
-        setTimeout(function () { window.location.replace(androidUrl); }, 600);
-        return;
-      }
+      if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) { goToStore(iosUrl); return; }
+      if (/android/i.test(ua)) { goToStore(androidUrl); return; }
 
-      // Desktop / autres : on garde la page complète avec contenu SEO
+      // Desktop : on garde la page complète (SEO). Un clic store = signal d'intention.
+      ["ios-btn", "android-btn"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("click", function () {
+            if (typeof fbq === "function") { fbq('track', 'Lead'); }
+          });
+        }
+      });
     })();
   </script>
 </body>
