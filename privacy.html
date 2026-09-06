@@ -78,7 +78,7 @@
 <header>
   <p class="kicker">DiabeteFood</p>
   <h1>Politique de confidentialité</h1>
-  <p class="updated">Dernière mise à jour : 2 septembre 2026</p>
+  <p class="updated">Dernière mise à jour : 6 septembre 2026</p>
 </header>
 
 <p class="lead">Cette politique explique quelles données l'application DiabeteFood traite, où elles vont, combien de temps elles restent, et ce que tu peux exiger à leur sujet. Elle est écrite pour être lue, pas pour être contournée.</p>
@@ -147,13 +147,14 @@
 <p>Ces coordonnées professionnelles sont conservées dans la même base européenne et transmises par e-mail à l'éditeur via <strong>Resend</strong>. Un praticien peut demander leur suppression à l'adresse de contact ci-dessous.</p>
 
 <h3>4.6 Mesure d'audience et attribution</h3>
-<p>L'application intègre deux outils de mesure :</p>
+<p>L'application intègre trois outils de mesure :</p>
 <div class="table-scroll">
 <table>
   <thead><tr><th>Outil</th><th>Éditeur</th><th>Ce qu'il traite</th></tr></thead>
   <tbody>
     <tr><td>Firebase Analytics</td><td>Google</td><td>Événements d'usage anonymisés : écrans ouverts, fonctionnalités utilisées, étapes d'abonnement</td></tr>
     <tr><td>AppsFlyer</td><td>AppsFlyer Ltd.</td><td>Attribution d'installation : savoir par quelle campagne ou quel lien tu as découvert l'application</td></tr>
+    <tr><td>SDK Meta</td><td>Meta Platforms</td><td>Attribution des campagnes Facebook et Instagram, et mesure des abonnements qui en découlent</td></tr>
   </tbody>
 </table>
 </div>
@@ -161,13 +162,14 @@
 <p><strong>Suivi publicitaire.</strong> L'application diffuse des campagnes de publicité pour se faire connaître, et a besoin de savoir quelles campagnes fonctionnent. Elle te demande donc, au premier lancement, l'autorisation de suivi d'iOS (<strong>App Tracking Transparency</strong>).</p>
 <ul>
   <li><strong>Si tu refuses</strong> — et c'est un vrai refus, sans conséquence sur le fonctionnement de l'application — l'identifiant publicitaire de ton iPhone (IDFA) n'est pas lu, et l'attribution se fait de manière approximative et non individuelle.</li>
-  <li><strong>Si tu acceptes</strong>, AppsFlyer peut rapprocher ton installation de la campagne qui t'a amené, en utilisant cet identifiant.</li>
+  <li><strong>Si tu acceptes</strong>, AppsFlyer et le SDK Meta peuvent rapprocher ton installation de la campagne qui t'a amené, en utilisant cet identifiant.</li>
 </ul>
 <p>Dans les deux cas : nous <strong>ne vendons aucune donnée</strong>, nous <strong>n'affichons aucune publicité dans l'application</strong>, et rien de ce qui touche à ta santé n'entre dans ce dispositif.</p>
 <p>Tu peux revenir sur ton choix à tout moment dans <strong>Réglages iOS → Confidentialité et sécurité → Suivi</strong>.</p>
 
 <h3>4.7 L'abonnement</h3>
 <p>Si tu souscris un abonnement Premium, <strong>Apple</strong> (ou <strong>Google</strong> sur Android) gère intégralement la transaction. Nous ne voyons jamais ton moyen de paiement ni ton identifiant de compte. Nous recevons uniquement l'état de l'abonnement : actif ou non.</p>
+<p>Pour suivre ces abonnements sans les compter à la main, nous utilisons <strong>RevenueCat</strong>. Il reçoit la transaction telle qu'Apple la publie — produit, montant, date, renouvellement ou résiliation — accompagnée de l'identifiant technique d'installation décrit en 4.1. Ni ton nom, ni ton e-mail, ni aucune donnée de santé ne lui sont transmis, et il n'intervient pas dans le paiement lui-même.</p>
 
 <h2>5. Sur quelle base légale</h2>
 <div class="table-scroll">
@@ -182,7 +184,7 @@
     <tr><td>Sauvegarde du journal dans ton iCloud</td><td>Exécution du contrat — art. 6.1.b</td></tr>
     <tr><td>Mesure d'audience</td><td>Intérêt légitime — art. 6.1.f</td></tr>
     <tr><td>Attribution publicitaire avec identifiant (IDFA)</td><td>Consentement — art. 6.1.a</td></tr>
-    <tr><td>Gestion de l'abonnement</td><td>Exécution du contrat — art. 6.1.b</td></tr>
+    <tr><td>Gestion et suivi de l'abonnement</td><td>Exécution du contrat — art. 6.1.b</td></tr>
   </tbody>
 </table>
 </div>
@@ -199,6 +201,8 @@
     <tr><td>Open Food Facts</td><td>Base nutritionnelle ouverte</td><td>France</td><td><a href="https://world.openfoodfacts.org/terms-of-use" rel="noopener">Lien</a></td></tr>
     <tr><td>Google (Firebase)</td><td>Mesure d'audience</td><td>États-Unis / UE</td><td><a href="https://firebase.google.com/support/privacy" rel="noopener">Lien</a></td></tr>
     <tr><td>AppsFlyer Ltd.</td><td>Attribution d'installation</td><td>Israël / UE</td><td><a href="https://www.appsflyer.com/legal/privacy-policy/" rel="noopener">Lien</a></td></tr>
+    <tr><td>Meta Platforms Ireland Ltd.</td><td>Attribution des campagnes Facebook et Instagram</td><td>Irlande / États-Unis</td><td><a href="https://www.facebook.com/privacy/policy" rel="noopener">Lien</a></td></tr>
+    <tr><td>RevenueCat, Inc.</td><td>Suivi des abonnements</td><td>États-Unis</td><td><a href="https://www.revenuecat.com/privacy" rel="noopener">Lien</a></td></tr>
     <tr><td>Resend, Inc.</td><td>Envoi des e-mails de contact praticien</td><td>États-Unis</td><td><a href="https://resend.com/legal/privacy-policy" rel="noopener">Lien</a></td></tr>
     <tr><td>Apple Inc.</td><td>Distribution, facturation, et hébergement de la sauvegarde iCloud dans ton propre compte</td><td>États-Unis / UE</td><td><a href="https://www.apple.com/legal/privacy/fr-ww/" rel="noopener">Lien</a></td></tr>
   </tbody>
@@ -217,8 +221,8 @@
     <tr><td>Bilan partagé avec un praticien</td><td>90 jours maximum, ou jusqu'à révocation par toi. Suppression réelle ensuite, photos comprises.</td></tr>
     <tr><td>Coordonnées d'un praticien</td><td>Jusqu'à sa demande de suppression.</td></tr>
     <tr><td>Requêtes IA et code-barres</td><td>Non conservées par nous.</td></tr>
-    <tr><td>Données d'audience</td><td>Selon les durées de Google et AppsFlyer.</td></tr>
-    <tr><td>Abonnement</td><td>Selon les règles d'Apple et de Google.</td></tr>
+    <tr><td>Données d'audience et d'attribution</td><td>Selon les durées de Google, AppsFlyer et Meta.</td></tr>
+    <tr><td>Abonnement</td><td>Selon les règles d'Apple, de Google et de RevenueCat.</td></tr>
   </tbody>
 </table>
 </div>
