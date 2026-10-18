@@ -44,7 +44,7 @@
 <!-- ===================================================================== -->
 <!-- ===== PIXEL META — "DiabeteFood Web" (ID 1046389911260321) ===== -->
 <!-- -->
-<!-- Sur mobile, cette page redirige vers le store en 600 ms. Le Pixel sert -->
+<!-- Sur mobile, un bouton mène au store (sans redirection). Le Pixel sert -->
 <!-- au retargeting et au signal d'intention (Lead), PAS à l'optimisation -->
 <!-- sur l'achat : les abonnements ont lieu DANS l'app et remontent à Meta -->
 <!-- via AppsFlyer. -->
@@ -277,6 +277,7 @@ padding: 14px 18px; margin-bottom: 20px; font-size: 14px;
 color: var(--text-primary); text-align: center;
 }
 .redirect-msg.show { display: block; }
+a.redirect-msg { text-decoration: none; font-weight: 700; font-size: 16px; }
 @media (max-width: 480px) {
 h1 { font-size: 34px; }
 h2 { font-size: 20px; }
@@ -294,9 +295,7 @@ h2 { font-size: 20px; }
 <div class="trial-badge">Gratuit à télécharger</div>
 </header>
 
-<div id="redirect-msg" class="redirect-msg">
-Redirection vers le store en cours…
-</div>
+<a id="mobile-cta" class="redirect-msg" href="https://apps.apple.com/app/diabetefood/id6764684903">Télécharger DiabeteFood gratuitement</a>
 
 <ul class="features">
 <li>Scanner de codes-barres pour analyser instantanément vos produits alimentaires</li>
@@ -457,25 +456,19 @@ Sources médicales : Fédération Française des Diabétiques, Diabète Belgique
 </main>
 
 <script>
-// Détection device & redirection automatique vers le bon store.
-// On laisse 600 ms au Pixel pour envoyer ses évènements avant de quitter la page.
+// Mobile : plus de redirection automatique, pour que Google puisse lire la page.
+// On affiche un bouton vers le bon store. Un clic store = signal d'intention (Lead).
 (function () {
 var ua = navigator.userAgent || navigator.vendor || window.opera;
 var iosUrl = "https://apps.apple.com/app/diabetefood/id6764684903";
 var androidUrl = "https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr";
-var msg = document.getElementById("redirect-msg");
+var cta = document.getElementById("mobile-cta");
+var storeUrl = null;
+if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) { storeUrl = iosUrl; }
+else if (/android/i.test(ua)) { storeUrl = androidUrl; }
+if (storeUrl && cta) { cta.href = storeUrl; cta.classList.add("show"); }
 
-function goToStore(url) {
-msg.classList.add("show");
-if (typeof fbq === "function") { fbq('track', 'Lead'); }
-setTimeout(function () { window.location.replace(url); }, 600);
-}
-
-if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) { goToStore(iosUrl); return; }
-if (/android/i.test(ua)) { goToStore(androidUrl); return; }
-
-// Desktop : on garde la page complète (SEO). Un clic store = signal d'intention.
-["ios-btn", "android-btn"].forEach(function (id) {
+["ios-btn", "android-btn", "mobile-cta"].forEach(function (id) {
 var el = document.getElementById(id);
 if (el) {
 el.addEventListener("click", function () {
