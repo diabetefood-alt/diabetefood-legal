@@ -96,6 +96,9 @@ article li{margin-bottom:8px}
 figure{margin:20px 0}
 figure img{width:100%;height:auto;border-radius:16px;display:block}
 figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:center}
+.qr-box{display:none;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.qr-box img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
+.qr-box p{margin:0;max-width:260px;text-align:left}
 </style>
 </head>
 <body>
@@ -109,7 +112,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <img src="/guides/img/petit-dejeuner-diabete.webp" width="960" height="540" alt="Comparaison de deux petits-déjeuners : céréales sucrées, jus d'orange et croissant (environ 85 g de glucides) contre flocons d'avoine aux fruits rouges, œuf et yaourt nature (environ 35 g de glucides)" />
 <figcaption>Zeste, la mascotte DiabeteFood, compare deux petits-déjeuners. Estimations calculées avec la table Ciqual.</figcaption>
 </figure>
-<div class="cta"><p>Vous hésitez devant un paquet de céréales ? Scannez-le avec DiabeteFood : l'app vous montre ses vrais glucides en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a></div>
+<div class="cta"><p>Vous hésitez devant un paquet de céréales ? Scannez-le avec DiabeteFood : l'app vous montre ses vrais glucides en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <h2>Pourquoi le petit-déjeuner est un repas à part</h2>
 <p>Le matin, le corps libère des hormones (comme le cortisol) qui ont tendance à faire monter la glycémie. Beaucoup de personnes diabétiques constatent donc qu'un même aliment les fait davantage grimper au petit-déjeuner qu'au déjeuner. C'est aussi le repas où l'on mange le plus de produits sucrés « par habitude » : céréales, confiture, jus, viennoiseries.</p>
 <h2>Les glucides des aliments du matin</h2>
@@ -154,7 +157,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <li><strong>Le pain blanc avec confiture :</strong> deux tartines de baguette et de confiture, c'est déjà près de 60 g de glucides, presque sans protéines ni fibres.</li>
 <li><strong>Sauter le petit-déjeuner sans avis médical :</strong> avec de l'insuline ou certains médicaments, cela peut provoquer une hypoglycémie. Parlez-en à votre médecin.</li>
 </ul>
-<div class="cta"><p>Céréales, pain, yaourts, assiettes : scannez votre petit-déjeuner avec DiabeteFood et voyez en un geste ce qu'il contient vraiment.</p></div>
+<div class="cta"><p>Céréales, pain, yaourts, assiettes : scannez votre petit-déjeuner avec DiabeteFood et voyez en un geste ce qu'il contient vraiment.</p><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <div class="buttons">
 <a class="store-btn"
 href="https://apps.apple.com/app/diabetefood/id6764684903"
@@ -198,6 +201,8 @@ Ces informations sont générales et ne remplacent pas l'avis de votre médecin 
 <script>
 // Bouton "Essayer" : Google Play sur Android, App Store sinon. Aucune redirection automatique.
 (function(){var b=document.getElementById("try-btn");if(b&&/android/i.test(navigator.userAgent)){b.href="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr";}})();
+// Sur ordinateur : QR code à scanner à la place du bouton (on ne peut pas installer l'app sur PC).
+(function(){var ua=navigator.userAgent||"";var mob=/android|iphone|ipad|ipod/i.test(ua)||(navigator.maxTouchPoints>1&&/Macintosh/.test(ua));if(!mob){var b=document.getElementById("try-btn");if(b){b.style.display="none";}document.querySelectorAll(".qr-box").forEach(function(e){e.style.display="flex";});}})();
 </script>
 </body>
 </html>
