@@ -172,292 +172,230 @@ src="https://www.facebook.com/tr?id=1046389911260321&ev=PageView&noscript=1" alt
 </script>
 
 <style>
-:root {
---orange-primary: #FF8A3D;
---orange-dark: #E5722A;
---orange-light: #FFE5CC;
---surface-warm: #FFF7F0;
---surface-peach: #FFF1E6;
---text-primary: #2C1810;
---text-muted: #8B7568;
---border-orange: #FFE5CC;
---green: #2E7D32;
+:root{
+--o:#FF8A3D;--od:#E5722A;--ol:#FFE5CC;--bg:#FFF7F0;--bg2:#FFF1E6;--card:#FFFFFF;
+--t:#2C1810;--tm:#8B7568;--b:#F5D9C2;--g:#2E7D32;--ink:#1E120B;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-background: linear-gradient(180deg, var(--surface-warm) 0%, var(--surface-peach) 100%);
-color: var(--text-primary);
-min-height: 100vh;
-line-height: 1.6;
-}
-main { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
-.hero { text-align: center; padding: 24px 0; }
-.mascot {
-width: 140px; height: 140px; display: block; margin: 0 auto 16px;
-border-radius: 32px; animation: bounce 2.4s ease-in-out infinite;
-box-shadow: 0 12px 28px rgba(229, 114, 42, 0.28);
-}
-@keyframes bounce {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-14px); }
-}
-h1 {
-font-size: 42px; font-weight: 800; margin-bottom: 8px;
-background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
--webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.tagline { font-size: 18px; color: var(--text-muted); margin-bottom: 16px; }
-.trial-badge {
-display: inline-block; background: var(--green); color: white;
-font-size: 14px; font-weight: 700; padding: 6px 16px;
-border-radius: 100px; margin-bottom: 24px;
-}
-h2 { font-size: 24px; font-weight: 700; margin: 40px 0 16px; color: var(--text-primary); }
-h3 { font-size: 18px; font-weight: 600; margin: 16px 0 8px; color: var(--orange-dark); }
-p { margin-bottom: 12px; }
-.features {
-background: white; border: 1px solid var(--border-orange);
-border-radius: 18px; padding: 20px 24px; margin: 24px 0;
-}
-.features li {
-list-style: none; padding: 8px 0; display: flex;
-align-items: center; gap: 12px; font-size: 15px;
-}
-.features li::before {
-content: "✓"; color: var(--orange-primary); font-weight: 700;
-font-size: 18px; flex-shrink: 0;
-}
-.buttons { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
-.store-btn {
-display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-background: #000; color: white; text-decoration: none;
-padding: 16px 28px; border-radius: 14px; font-size: 16px; font-weight: 600;
-transition: transform 0.15s ease, box-shadow 0.15s ease;
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-.store-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); }
-.store-btn svg { width: 28px; height: 28px; flex-shrink: 0; }
-.store-btn .label { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.1; }
-.store-btn .small { font-size: 11px; font-weight: 400; opacity: 0.8; }
-.store-btn .big { font-size: 18px; font-weight: 600; }
-.info-card {
-background: white; border: 1px solid var(--border-orange);
-border-radius: 14px; padding: 18px 22px; margin: 12px 0;
-}
-.price-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0; }
-.price-card {
-background: white; border: 1px solid var(--border-orange);
-border-radius: 14px; padding: 16px; text-align: center;
-}
-.price-card.popular { border-color: var(--orange-primary); border-width: 2px; position: relative; }
-.price-card.popular::before {
-content: "POPULAIRE"; position: absolute; top: -10px; left: 50%;
-transform: translateX(-50%); background: var(--orange-primary); color: white;
-padding: 3px 12px; border-radius: 10px; font-size: 10px;
-font-weight: 700; letter-spacing: 0.5px;
-}
-.price-card .price { font-size: 22px; font-weight: 800; color: var(--orange-dark); margin: 8px 0; }
-.price-card .freq { font-size: 12px; color: var(--text-muted); }
-.price-card .save {
-display: inline-block; background: var(--green); color: white;
-font-size: 10px; font-weight: 700; padding: 2px 8px;
-border-radius: 8px; margin-top: 6px;
-}
-.legal-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 10px; }
-.footer {
-font-size: 13px; color: var(--text-muted); margin-top: 40px;
-padding-top: 24px; border-top: 1px solid var(--border-orange); text-align: center;
-}
-.footer a { color: var(--orange-dark); text-decoration: none; }
-.footer a:hover { text-decoration: underline; }
-.redirect-msg {
-display: none; background: var(--orange-light); border-radius: 12px;
-padding: 14px 18px; margin-bottom: 20px; font-size: 14px;
-color: var(--text-primary); text-align: center;
-}
-.redirect-msg.show { display: block; }
-a.redirect-msg { text-decoration: none; font-weight: 700; font-size: 16px; }
-@media (max-width: 480px) {
-h1 { font-size: 34px; }
-h2 { font-size: 20px; }
-.price-grid { grid-template-columns: 1fr; }
-}
-.qr-box{display:none;align-items:center;justify-content:center;gap:16px;margin:8px 0 24px}
-.qr-box img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
-.qr-box p{margin:0;max-width:260px;text-align:left;font-weight:600}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--t);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,247,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--b)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;text-decoration:none}
+.brand img{width:34px;height:34px;border-radius:9px}
+.nav{display:flex;gap:22px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.nav a{text-decoration:none;color:var(--tm)}
+.nav a:hover{color:var(--od)}
+.btn-top{background:var(--o);color:#fff;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:10px 16px;border-radius:12px;white-space:nowrap}
+.btn-top:hover{background:var(--od)}
+@media(max-width:860px){.nav{display:none}}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1100px 500px at 80% 10%,#FFE2C7 0%,rgba(255,226,199,0) 60%),linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);border-bottom:1px solid var(--b)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:48px;padding-bottom:56px}
+.pill{display:inline-block;background:var(--card);border:1px solid var(--b);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--tm)}
+.pill b{color:var(--g)}
+.hero h1{font-size:clamp(34px,5.4vw,60px);line-height:1.02;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;margin:20px 0 18px;color:var(--ink)}
+.hero h1 u{text-decoration:none;box-shadow:inset 0 -.18em 0 var(--ol)}
+.hero h1 em{font-style:normal;color:var(--o)}
+.lead{border-left:4px solid var(--o);padding-left:16px;margin-bottom:26px;max-width:560px}
+.lead strong{display:block;font-size:19px;color:var(--ink)}
+.lead span{color:var(--tm);font-size:16px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px}
+.store-btn{display:inline-flex;align-items:center;gap:12px;background:#000;color:#fff;text-decoration:none;padding:13px 22px;border-radius:14px;box-shadow:0 6px 16px rgba(0,0,0,.14);transition:transform .15s}
+.store-btn:hover{transform:translateY(-2px)}
+.store-btn svg{width:26px;height:26px;flex-shrink:0}
+.store-btn .label{display:flex;flex-direction:column;line-height:1.1}
+.store-btn .small{font-size:11px;opacity:.8}
+.store-btn .big{font-size:18px;font-weight:700}
+.redirect-msg{display:none;background:var(--o);color:#fff;border-radius:14px;padding:15px 18px;margin-bottom:14px;text-align:center;font-weight:800;text-decoration:none;font-size:17px}
+.redirect-msg.show{display:block}
+.qr-box{display:none;align-items:center;gap:16px;background:var(--card);border:1px solid var(--b);border-radius:16px;padding:14px;max-width:440px}
+.qr-box img{width:104px;height:104px;background:#fff;border-radius:10px;padding:4px;flex-shrink:0}
+.qr-box p{font-size:14px;font-weight:600;color:var(--t)}
+.micro{font-size:13px;color:var(--tm);margin-top:14px}
+/* phone */
+.phones{position:relative;height:560px}
+.phone{position:absolute;width:250px;aspect-ratio:9/19.5;background:#111;border-radius:40px;padding:10px;box-shadow:0 30px 60px rgba(120,60,20,.25)}
+.phone .screen{width:100%;height:100%;border-radius:31px;overflow:hidden;background:linear-gradient(180deg,#FFF7F0,#FFE9D6);display:flex;align-items:center;justify-content:center}
+.phone .screen img,.phone .screen video{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.phone .screen img.ph{width:96px;height:96px;object-fit:contain;border-radius:22px}
+.phone.p1{left:50%;top:0;transform:translateX(-30%) rotate(3deg);z-index:2}
+.phone.p2{left:50%;top:60px;transform:translateX(-95%) rotate(-6deg);opacity:.95}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-top:32px}.phones{height:480px}.phone{width:220px}.phone.p2{display:none}.phone.p1{transform:translateX(-50%) rotate(2deg)}}
+/* strip */
+.strip{background:var(--ink);color:#FFE5CC}
+.strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 36px;padding:16px 20px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.strip span::before{content:"●";color:var(--o);margin-right:10px}
+/* sections */
+section{padding:72px 0}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--od);margin-bottom:10px}
+h2{font-size:clamp(26px,3.6vw,40px);line-height:1.1;font-weight:900;letter-spacing:-.01em;text-transform:uppercase;color:var(--ink);margin-bottom:14px}
+.sub{color:var(--tm);font-size:17px;max-width:640px;margin-bottom:34px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--b);border-radius:20px;padding:22px}
+.card .ic{width:44px;height:44px;border-radius:12px;background:var(--ol);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.card h3{font-size:18px;color:var(--ink);margin-bottom:6px}
+.card p{font-size:15px;color:var(--tm)}
+.tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.08em;background:var(--o);color:#fff;border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:middle}
+/* steps */
+.steps{background:var(--bg2);border-top:1px solid var(--b);border-bottom:1px solid var(--b)}
+.step{display:grid;grid-template-columns:80px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--b)}
+.step:first-of-type{border-top:0}
+.step .n{font-size:44px;font-weight:900;color:var(--o);line-height:1}
+.step h3{font-size:20px;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+.step p{color:var(--tm)}
+/* problem */
+.problem{background:var(--ink);color:#F6E3D3}
+.problem h2{color:#fff}
+.problem h2 em{font-style:normal;color:var(--o)}
+.problem p{max-width:720px;color:#E8CDB8;font-size:17px;margin-bottom:14px}
+.problem .big{font-size:20px;font-weight:800;color:#fff;margin-top:22px;text-transform:uppercase;letter-spacing:.02em}
+.btn-main{display:inline-block;margin-top:24px;background:var(--o);color:#fff;text-decoration:none;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:15px 24px;border-radius:14px}
+.btn-main:hover{background:var(--od)}
+/* guides */
+.glist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:860px){.glist{grid-template-columns:1fr}}
+.glist a{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border:1px solid var(--b);border-radius:14px;padding:14px 18px;text-decoration:none;font-weight:700;color:var(--ink)}
+.glist a::after{content:"→";color:var(--o);font-weight:900}
+.glist a:hover{border-color:var(--o)}
+.more{display:inline-block;margin-top:18px;font-weight:800;color:var(--od);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;font-size:13px}
+/* pricing */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:700px){.price-grid{grid-template-columns:1fr}}
+.price-card{background:var(--card);border:1px solid var(--b);border-radius:20px;padding:22px;text-align:center;position:relative}
+.price-card.popular{border:2px solid var(--o)}
+.price-card.popular::before{content:"POPULAIRE";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--o);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em;padding:3px 12px;border-radius:10px}
+.price-card .price{font-size:30px;font-weight:900;color:var(--od);margin:6px 0}
+.price-card .freq{font-size:13px;color:var(--tm)}
+.price-card .save{display:inline-block;margin-top:8px;background:var(--g);color:#fff;font-size:11px;font-weight:800;padding:2px 9px;border-radius:8px}
+.legal-note{font-size:12px;color:var(--tm);text-align:center;margin-top:14px}
+/* faq */
+details{background:var(--card);border:1px solid var(--b);border-radius:14px;padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:800;color:var(--ink);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--o);font-size:22px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--tm)}
+details a{color:var(--od)}
+/* footer */
+.footer{border-top:1px solid var(--b);padding:32px 0 48px;text-align:center;font-size:13px;color:var(--tm)}
+.footer a{color:var(--od);text-decoration:none}
 </style>
 </head>
 
 <body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/"><img src="app-icon.png" alt="DiabeteFood" />DiabeteFood</a>
+<nav class="nav"><a href="#fonctions">Fonctions</a><a href="#comment">Comment ça marche</a><a href="/guides/">Guides</a><a href="#tarifs">Tarifs</a><a href="#faq">FAQ</a></nav>
+<a class="btn-top" href="#telecharger">Télécharger</a>
+</div></header>
+
 <main>
-<header class="hero">
-<img class="mascot" src="app-icon.png" alt="Logo DiabeteFood — assistant nutritionnel pour le diabète" />
-<h1>DiabeteFood</h1>
-<p class="tagline">L'application diabète qui rend l'alimentation simple — pour le type 1 et le type 2.</p>
-<div class="trial-badge">Gratuit à télécharger</div>
-</header>
-
+<section class="hero" id="telecharger" style="padding:0"><div class="wrap">
+<div>
+<div class="pill"><b>Gratuit</b> · Type 1 et type 2 · iPhone et Android</div>
+<h1>Le Nutri-Score ne connaît pas <u>votre diabète</u>.<br><em>DiabeteFood, si.</em></h1>
+<div class="lead"><strong>Scannez un produit ou photographiez votre assiette.</strong><span>Glucides, index glycémique et un score adapté à votre type 1 ou type 2, en quelques secondes.</span></div>
 <a id="mobile-cta" class="redirect-msg" href="https://apps.apple.com/app/diabetefood/id6764684903">Télécharger DiabeteFood gratuitement</a>
-
-<ul class="features">
-<li>Scanner de codes-barres pour analyser instantanément vos produits alimentaires</li>
-<li>Photo de repas avec analyse IA et identification automatique des aliments</li>
-<li>Score Diabète adapté à votre type 1 ou type 2</li>
-<li>Index glycémique calculé pour chaque produit</li>
-<li>Calculateur de portion intelligent avec estimation d'insuline (Premium)</li>
-<li>Historique complet, badges et streaks pour rester motivé</li>
-<li>Sources médicales officielles (Fédération des Diabétiques, Inserm, OMS)</li>
-</ul>
-
 <div class="buttons">
-<a class="store-btn" id="ios-btn"
-href="https://apps.apple.com/app/diabetefood/id6764684903"
-aria-label="Télécharger DiabeteFood sur l'App Store iPhone">
-<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-<path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-</svg>
-<div class="label">
-<span class="small">Télécharger sur</span>
-<span class="big">App Store</span>
+<a class="store-btn" id="ios-btn" href="https://apps.apple.com/app/diabetefood/id6764684903" aria-label="Télécharger DiabeteFood sur l'App Store iPhone">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+<div class="label"><span class="small">Télécharger sur</span><span class="big">App Store</span></div></a>
+<a class="store-btn" id="android-btn" href="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr" aria-label="Télécharger DiabeteFood sur Google Play Android">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198 2.464 1.428a1 1 0 0 1 0 1.73l-2.464 1.427-2.498-2.497 2.498-2.498zM5.864 2.658 16.802 8.99l-2.302 2.302L5.864 2.658z"/></svg>
+<div class="label"><span class="small">Disponible sur</span><span class="big">Google Play</span></div></a>
 </div>
-</a>
-
-<a class="store-btn" id="android-btn"
-href="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr"
-aria-label="Télécharger DiabeteFood sur Google Play Android">
-<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-<path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198 2.464 1.428a1 1 0 0 1 0 1.73l-2.464 1.427-2.498-2.497 2.498-2.498zM5.864 2.658 16.802 8.99l-2.302 2.302L5.864 2.658z"/>
-</svg>
-<div class="label">
-<span class="small">Disponible sur</span>
-<span class="big">Google Play</span>
+<div class="qr-box"><img src="/guides/qr-app.svg" width="104" height="104" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div>
+<p class="micro">Gratuit à télécharger · Plusieurs analyses offertes · Sans période d'essai à annuler</p>
 </div>
-</a>
+<div class="phones">
+<div class="phone p2"><div class="screen"><img src="/guides/img/scan-conseils.webp" width="360" height="746" alt="Conseils et alternative proposés par DiabeteFood après un scan" loading="lazy" /></div></div>
+<div class="phone p1"><div class="screen"><video src="/guides/img/scan-demo.mp4" poster="/guides/img/scan-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="Démonstration : scan du code-barres de cornflakes dans DiabeteFood, avec index glycémique et score diabète"></video></div></div>
 </div>
-<div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div>
+</div></section>
 
-<h2>Pourquoi DiabeteFood pour les personnes diabétiques ?</h2>
-<p>
-DiabeteFood a été créée pour aider les personnes vivant avec un diabète de type 1 ou de type 2
-à mieux comprendre ce qu'elles mangent. Contrairement à un simple scanner Nutri-Score,
-l'application propose un <strong>score adapté à votre profil diabétique</strong>, prend en compte
-l'index glycémique, les fibres et les sucres ajoutés, et propose des alternatives concrètes
-avec photos de produits réels.
-</p>
+<div class="strip"><div class="wrap"><span>Scanner de codes-barres</span><span>Photo d'assiette analysée par IA</span><span>Score adapté à votre diabète</span><span>Index glycémique</span></div></div>
 
-<h2>Fonctionnalités principales</h2>
-
-<div class="info-card">
-<h3>Scanner de codes-barres alimentaires</h3>
-<p>
-Pointez la caméra de votre iPhone ou Android vers un code-barres. L'app récupère les données
-OpenFoodFacts puis les analyse via une intelligence artificielle entraînée sur les besoins
-spécifiques des personnes diabétiques. Vous obtenez en quelques secondes un verdict clair
-(Excellent, Acceptable, À éviter), un index glycémique, et des conseils sur le moment de consommation.
-</p>
+<section id="fonctions"><div class="wrap">
+<div class="kicker">Fonctionnalités</div>
+<h2>Tout ce qu'il faut pour savoir quoi manger.</h2>
+<p class="sub">Un simple scanner vous dit si un produit est « bon » en général. DiabeteFood vous dit s'il est bon pour vous, avec votre type de diabète.</p>
+<div class="grid">
+<div class="card"><div class="ic">▦</div><h3>Scanner de codes-barres</h3><p>Pointez la caméra sur un produit : l'app récupère ses données OpenFoodFacts et vous donne un verdict clair (Excellent, Acceptable, À éviter).</p></div>
+<div class="card"><div class="ic">📷</div><h3>Photo de repas</h3><p>Photographiez votre assiette : l'IA identifie les aliments, estime les portions et les glucides, et calcule un score global.</p></div>
+<div class="card"><div class="ic">◎</div><h3>Score Diabète</h3><p>Un score pensé pour le type 1 ou le type 2, qui tient compte des glucides, de l'index glycémique, des fibres et des sucres ajoutés.</p></div>
+<div class="card"><div class="ic">↗</div><h3>Index glycémique</h3><p>Pour chaque produit, une estimation de l'index glycémique et des conseils sur le meilleur moment pour le manger.</p></div>
+<div class="card"><div class="ic">⚖</div><h3>Calculateur de portion <span class="tag">PREMIUM</span></h3><p>Ajustez la quantité et voyez tout de suite les glucides correspondants. Estimation indicative d'insuline possible après validation médicale.</p></div>
+<div class="card"><div class="ic">★</div><h3>Journal et motivation</h3><p>Historique de vos scans et repas, badges et séries pour garder de bonnes habitudes jour après jour.</p></div>
 </div>
+</div></section>
 
-<div class="info-card">
-<h3>Journal photo de repas avec analyse IA</h3>
-<p>
-Photographiez votre assiette : DiabeteFood identifie automatiquement les aliments, estime les portions
-et calcule un score Diabète global. Plusieurs analyses photo offertes, illimité avec Premium.
-</p>
+<section class="steps" id="comment"><div class="wrap">
+<div class="kicker">Comment ça marche</div>
+<h2>Trois gestes, pas plus.</h2>
+<div class="step"><div class="n">01</div><div><h3>Indiquez votre diabète</h3><p>Type 1 ou type 2 : l'app adapte ses scores et ses conseils à votre profil.</p></div></div>
+<div class="step"><div class="n">02</div><div><h3>Scannez ou photographiez</h3><p>Un code-barres au supermarché, une assiette au restaurant ou à la maison.</p></div></div>
+<div class="step"><div class="n">03</div><div><h3>Mangez en sachant</h3><p>Glucides, index glycémique, verdict et alternatives : vous décidez en connaissance de cause.</p></div></div>
+</div></section>
+
+<section class="problem"><div class="wrap">
+<div class="kicker" style="color:var(--o)">Le problème</div>
+<h2>« 0 % de matières grasses. »<br><em>Et pourtant, votre glycémie grimpe.</em></h2>
+<p>Les étiquettes et les notes nutritionnelles sont faites pour tout le monde. Un produit « allégé » ou bien noté peut contenir beaucoup de sucres ajoutés ou d'amidon rapide, et faire monter la glycémie.</p>
+<p>DiabeteFood regarde ce qui compte vraiment quand on est diabétique : la quantité de glucides, leur vitesse, les fibres et la portion que vous mangez vraiment.</p>
+<p class="big">Pas une note générale. Une réponse pour votre diabète.</p>
+<a class="btn-main" href="#telecharger">Télécharger DiabeteFood</a>
+</div></section>
+
+<section id="guides"><div class="wrap">
+<div class="kicker">Guides gratuits</div>
+<h2>Les questions que vous vous posez.</h2>
+<p class="sub">Des réponses simples et sourcées (table Ciqual de l'ANSES, tables internationales de l'index glycémique).</p>
+<div class="glist">
+<a href="/guides/diabete-type-2-aliments">Diabète de type 2 : les aliments à privilégier</a>
+<a href="/guides/petit-dejeuner-diabete">Petit-déjeuner diabétique : quoi manger le matin ?</a>
+<a href="/guides/diner-diabete">Que manger le soir quand on est diabétique ?</a>
+<a href="/guides/index-glycemique">Index glycémique : le guide simple</a>
+<a href="/guides/pain-diabete">Diabétique : peut-on manger du pain ?</a>
+<a href="/guides/fruits-diabete">Quels fruits manger avec un diabète ?</a>
+<a href="/guides/pates-diabete">Combien de glucides dans 100 g de pâtes ?</a>
+<a href="/guides/alcool-diabete">Diabétique : peut-on boire de l'alcool ?</a>
 </div>
+<a class="more" href="/guides/">Voir tous les guides →</a>
+</div></section>
 
-<div class="info-card">
-<h3>Estimation d'insuline (avancé)</h3>
-<p>
-Pour les utilisateurs Premium, après validation médicale, l'app peut calculer une estimation indicative
-d'unités d'insuline basée sur le ratio standard 1 UI / 10 g de glucides. Cette estimation ne remplace
-jamais le calcul personnalisé de votre diabétologue.
-</p>
-</div>
-
-<h2>Tarifs</h2>
+<section id="tarifs" style="background:var(--bg2);border-top:1px solid var(--b);border-bottom:1px solid var(--b)"><div class="wrap">
+<div class="kicker">Tarifs</div>
+<h2>Gratuit pour commencer.</h2>
+<p class="sub">Téléchargez l'app et faites plusieurs analyses complètes gratuitement. Vous ne payez que si vous choisissez le Premium.</p>
 <div class="price-grid">
-<div class="price-card">
-<div class="freq">Version gratuite</div>
-<div class="price">0 €</div>
-<div class="freq">Plusieurs analyses<br>offertes pour essayer</div>
+<div class="price-card"><div class="freq">Version gratuite</div><div class="price">0 €</div><div class="freq">Plusieurs analyses<br>offertes pour essayer</div></div>
+<div class="price-card"><div class="freq">Premium mensuel</div><div class="price">14,99 €</div><div class="freq">par mois</div></div>
+<div class="price-card popular"><div class="freq">Premium annuel</div><div class="price">47,99 €</div><div class="freq">par an, soit 4,00 €/mois</div><div class="save">−73 %</div></div>
 </div>
-<div class="price-card">
-<div class="freq">Premium mensuel</div>
-<div class="price">14,99 €</div>
-<div class="freq">par mois</div>
-</div>
-<div class="price-card popular">
-<div class="freq">Premium annuel</div>
-<div class="price">47,99 €</div>
-<div class="freq">par an — soit 4,00 €/mois</div>
-<div class="save">−73 %</div>
-</div>
-</div>
-<p class="legal-note">
-Abonnement renouvelé automatiquement, annulable à tout moment depuis Google Play ou l'App Store.
-</p>
+<p class="legal-note">Abonnement renouvelé automatiquement, annulable à tout moment depuis Google Play ou l'App Store.</p>
+</div></section>
 
-<h2>Questions fréquentes</h2>
-
-<div class="info-card">
-<h3>DiabeteFood est-elle gratuite ?</h3>
-<p>
-L'application est gratuite à télécharger, et <strong>plusieurs analyses complètes sont offertes</strong>
-pour vous faire une idée. Le Premium débloque les analyses illimitées, le score Diabète personnalisé,
-le calculateur de portion, les conseils complets et l'estimation d'insuline.
-</p>
-</div>
-
-<div class="info-card">
-<h3>Puis-je essayer avant de payer ?</h3>
-<p>
-Oui. L'application est gratuite à télécharger et plusieurs analyses complètes sont offertes.
-<strong>Il n'y a pas de période d'essai payante à penser à annuler</strong> : vous ne payez que si vous
-choisissez de vous abonner, et l'abonnement est résiliable à tout moment depuis Google Play ou l'App Store.
-</p>
-</div>
-
-<div class="info-card">
-<h3>L'app fonctionne-t-elle pour le diabète de type 1 et de type 2 ?</h3>
-<p>
-Oui. L'app adapte ses conseils à votre type de diabète. Type 1 : focus glucides et index glycémique
-pour aider au dosage de l'insuline. Type 2 : focus fibres, glucides lents, réduction des sucres ajoutés.
-</p>
-</div>
-
-<div class="info-card">
-<h3>DiabeteFood remplace-t-elle l'avis d'un médecin ?</h3>
-<p>
-Non. DiabeteFood est un outil informatif. Pour toute décision médicale, consultez votre
-médecin ou diabétologue. L'app affiche systématiquement les coordonnées d'organismes officiels
-(Fédération Française des Diabétiques, Inserm, OMS).
-</p>
-</div>
-
-<div class="info-card">
-<h3>Mes données médicales sont-elles privées ?</h3>
-<p>
-Votre journal, vos scans et votre profil restent sur votre téléphone et dans votre propre sauvegarde
-iCloud, à laquelle nous n'avons pas accès. Deux exceptions, que vous contrôlez : la photo d'un repas est
-transmise à notre service d'analyse par intelligence artificielle le temps du calcul, sans être conservée ;
-et un bilan n'est envoyé à un professionnel de santé que si vous le décidez vous-même.
-Le détail figure dans notre <a href="privacy.html">politique de confidentialité</a>.
-</p>
-</div>
-
-<footer class="footer">
-<p>
-© 2026 DiabeteFood ·
-<a href="terms.html">Conditions d'utilisation</a> ·
-<a href="privacy.html">Confidentialité</a>
-</p>
-<p style="margin-top: 12px; font-size: 11px; opacity: 0.7;">
-DiabeteFood est un outil d'information. Il ne remplace pas l'avis d'un professionnel de santé.<br>
-Sources médicales : Fédération Française des Diabétiques, Diabète Belgique, Inserm, OMS.
-</p>
-</footer>
+<section id="faq"><div class="wrap" style="max-width:820px">
+<div class="kicker">Questions fréquentes</div>
+<h2>Vous vous demandez…</h2>
+<details><summary>DiabeteFood est-elle gratuite ?</summary><p>L'application est gratuite à télécharger, et <strong>plusieurs analyses complètes sont offertes</strong> pour vous faire une idée. Le Premium débloque les analyses illimitées, le score Diabète personnalisé, le calculateur de portion, les conseils complets et l'estimation d'insuline.</p></details>
+<details><summary>Puis-je essayer avant de payer ?</summary><p>Oui. L'application est gratuite à télécharger et plusieurs analyses complètes sont offertes. <strong>Il n'y a pas de période d'essai payante à penser à annuler</strong> : vous ne payez que si vous choisissez de vous abonner, et l'abonnement est résiliable à tout moment depuis Google Play ou l'App Store.</p></details>
+<details><summary>L'app fonctionne-t-elle pour le diabète de type 1 et de type 2 ?</summary><p>Oui. L'app adapte ses conseils à votre type de diabète. Type 1 : focus glucides et index glycémique pour aider au dosage de l'insuline. Type 2 : focus fibres, glucides lents, réduction des sucres ajoutés.</p></details>
+<details><summary>Comment fonctionne le scanner d'aliments ?</summary><p>Pointez votre caméra vers le code-barres d'un produit. DiabeteFood récupère ses informations nutritionnelles via OpenFoodFacts puis utilise une intelligence artificielle pour calculer un score adapté à votre profil et vous donner des conseils concrets.</p></details>
+<details><summary>DiabeteFood remplace-t-elle l'avis d'un médecin ?</summary><p>Non. DiabeteFood est un outil informatif. Pour toute décision médicale, consultez votre médecin ou diabétologue. L'app affiche les coordonnées d'organismes officiels (Fédération Française des Diabétiques, Inserm, OMS).</p></details>
+<details><summary>Mes données médicales sont-elles privées ?</summary><p>Votre journal, vos scans et votre profil restent sur votre téléphone et dans votre propre sauvegarde iCloud, à laquelle nous n'avons pas accès. Deux exceptions, que vous contrôlez : la photo d'un repas est transmise à notre service d'analyse par intelligence artificielle le temps du calcul, sans être conservée ; et un bilan n'est envoyé à un professionnel de santé que si vous le décidez vous-même. Le détail figure dans notre <a href="privacy.html">politique de confidentialité</a>.</p></details>
+</div></section>
 </main>
+
+<footer class="footer"><div class="wrap">
+<p>© 2026 DiabeteFood · <a href="/guides/">Guides</a> · <a href="terms.html">Conditions d'utilisation</a> · <a href="privacy.html">Confidentialité</a></p>
+<p style="margin-top:12px;font-size:11px;opacity:.75">DiabeteFood est un outil d'information. Il ne remplace pas l'avis d'un professionnel de santé.<br>Sources médicales : Fédération Française des Diabétiques, Diabète Belgique, Inserm, OMS.</p>
+</div></footer>
 
 <script>
 // Mobile : plus de redirection automatique, pour que Google puisse lire la page.
