@@ -96,6 +96,9 @@ article li{margin-bottom:8px}
 figure{margin:20px 0}
 figure img{width:100%;height:auto;border-radius:16px;display:block}
 figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:center}
+.qr-box{display:none;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.qr-box img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
+.qr-box p{margin:0;max-width:260px;text-align:left}
 </style>
 </head>
 <body>
@@ -109,7 +112,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <img src="/guides/img/index-glycemique.webp" width="960" height="540" alt="Jauge de l'index glycémique avec trois zones : bas jusqu'à 55, moyen de 56 à 69, élevé à partir de 70, et Zeste, la mascotte orange de DiabeteFood" />
 <figcaption>Zeste vous explique l'index glycémique : plus l'aiguille va vers le rouge, plus le sucre arrive vite dans le sang.</figcaption>
 </figure>
-<div class="cta"><p>Envie de savoir ce que contient votre assiette ? Prenez-la en photo avec DiabeteFood : l'app estime ses glucides en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a></div>
+<div class="cta"><p>Envie de savoir ce que contient votre assiette ? Prenez-la en photo avec DiabeteFood : l'app estime ses glucides en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <h2>L'index glycémique, c'est quoi exactement ?</h2>
 <p>Quand vous mangez des glucides (pain, riz, fruits, sucre…), ils sont transformés en glucose qui passe dans le sang. Certains aliments le libèrent très vite, d'autres lentement. L'index glycémique classe les aliments selon cette vitesse, en les comparant au glucose pur, qui sert de référence avec un IG de 100.</p>
 <ul>
@@ -177,7 +180,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 </ul>
 <h2>Les limites de l'index glycémique</h2>
 <p>L'IG est mesuré sur un aliment mangé seul, à jeun. Dans un vrai repas, tout se mélange. Un IG bas ne veut pas dire « sain » non plus : certains produits riches en graisses ou en sucre ont un IG modéré parce que leurs graisses ralentissent la digestion. Utilisez l'IG comme un repère, avec la portion, les fibres et l'équilibre de l'assiette. Pour un objectif chiffré, demandez conseil à votre médecin ou à votre diététicien.</p>
-<div class="cta"><p>Photographiez votre assiette ou scannez un produit : DiabeteFood vous montre en un geste ses glucides et comment l'intégrer à votre journée.</p></div>
+<div class="cta"><p>Photographiez votre assiette ou scannez un produit : DiabeteFood vous montre en un geste ses glucides et comment l'intégrer à votre journée.</p><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <div class="buttons">
 <a class="store-btn"
 href="https://apps.apple.com/app/diabetefood/id6764684903"
@@ -221,6 +224,8 @@ Ces informations sont générales et ne remplacent pas l'avis de votre médecin 
 <script>
 // Bouton "Essayer" : Google Play sur Android, App Store sinon. Aucune redirection automatique.
 (function(){var b=document.getElementById("try-btn");if(b&&/android/i.test(navigator.userAgent)){b.href="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr";}})();
+// Sur ordinateur : QR code à scanner à la place du bouton (on ne peut pas installer l'app sur PC).
+(function(){var ua=navigator.userAgent||"";var mob=/android|iphone|ipad|ipod/i.test(ua)||(navigator.maxTouchPoints>1&&/Macintosh/.test(ua));if(!mob){var b=document.getElementById("try-btn");if(b){b.style.display="none";}document.querySelectorAll(".qr-box").forEach(function(e){e.style.display="flex";});}})();
 </script>
 </body>
 </html>
