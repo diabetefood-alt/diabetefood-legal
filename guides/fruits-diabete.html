@@ -96,6 +96,9 @@ article li{margin-bottom:8px}
 figure{margin:20px 0}
 figure img{width:100%;height:auto;border-radius:16px;display:block}
 figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:center}
+.qr-box{display:none;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.qr-box img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
+.qr-box p{margin:0;max-width:260px;text-align:left}
 </style>
 </head>
 <body>
@@ -109,7 +112,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <img src="/guides/img/fruits-diabete.webp" width="960" height="540" alt="Cinq fruits classés du moins au plus sucré pour 100 g : fraise 4 g, orange 8 g, pomme 11 g, raisin 16 g et banane 21 g de glucides, avec Zeste, la mascotte orange de DiabeteFood" />
 <figcaption>Du moins sucré au plus sucré : les glucides pour 100 g, selon la table Ciqual.</figcaption>
 </figure>
-<div class="cta"><p>Une salade de fruits, un dessert, un smoothie ? Prenez-le en photo avec DiabeteFood : l'app estime ses glucides en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a></div>
+<div class="cta"><p>Une salade de fruits, un dessert, un smoothie ? Prenez-le en photo avec DiabeteFood : l'app estime ses glucides en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <h2>Pourquoi garder les fruits au menu</h2>
 <p>Les fruits contiennent des sucres naturels (surtout du fructose et du glucose), donc ils font monter la glycémie. Mais ils apportent aussi des fibres, de l'eau, des vitamines et des antioxydants. Les supprimer n'est pas utile : il suffit de choisir les bons, de doser la portion et de bien les associer.</p>
 <h2>Le classement : du moins sucré au plus sucré</h2>
@@ -176,7 +179,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <li><strong>En fin de repas</strong> plutôt que seuls en grignotage.</li>
 <li><strong>Répartis dans la journée</strong> plutôt que tous au même moment.</li>
 </ul>
-<div class="cta"><p>Compotes, jus, fruits au sirop : scannez vos produits avec DiabeteFood et voyez en un geste leurs vrais sucres.</p></div>
+<div class="cta"><p>Compotes, jus, fruits au sirop : scannez vos produits avec DiabeteFood et voyez en un geste leurs vrais sucres.</p><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <div class="buttons">
 <a class="store-btn"
 href="https://apps.apple.com/app/diabetefood/id6764684903"
@@ -220,6 +223,8 @@ Ces informations sont générales et ne remplacent pas l'avis de votre médecin 
 <script>
 // Bouton "Essayer" : Google Play sur Android, App Store sinon. Aucune redirection automatique.
 (function(){var b=document.getElementById("try-btn");if(b&&/android/i.test(navigator.userAgent)){b.href="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr";}})();
+// Sur ordinateur : QR code à scanner à la place du bouton (on ne peut pas installer l'app sur PC).
+(function(){var ua=navigator.userAgent||"";var mob=/android|iphone|ipad|ipod/i.test(ua)||(navigator.maxTouchPoints>1&&/Macintosh/.test(ua));if(!mob){var b=document.getElementById("try-btn");if(b){b.style.display="none";}document.querySelectorAll(".qr-box").forEach(function(e){e.style.display="flex";});}})();
 </script>
 </body>
 </html>
