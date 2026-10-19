@@ -283,6 +283,9 @@ h1 { font-size: 34px; }
 h2 { font-size: 20px; }
 .price-grid { grid-template-columns: 1fr; }
 }
+.qr-box{display:none;align-items:center;justify-content:center;gap:16px;margin:8px 0 24px}
+.qr-box img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
+.qr-box p{margin:0;max-width:260px;text-align:left;font-weight:600}
 </style>
 </head>
 
@@ -332,6 +335,7 @@ aria-label="Télécharger DiabeteFood sur Google Play Android">
 </div>
 </a>
 </div>
+<div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div>
 
 <h2>Pourquoi DiabeteFood pour les personnes diabétiques ?</h2>
 <p>
@@ -477,6 +481,8 @@ if (typeof fbq === "function") { fbq('track', 'Lead'); }
 }
 });
 })();
+// Sur ordinateur : QR code à scanner (on ne peut pas installer l'app sur PC).
+(function(){var ua=navigator.userAgent||"";var mob=/android|iphone|ipad|ipod/i.test(ua)||(navigator.maxTouchPoints>1&&/Macintosh/.test(ua));if(!mob){document.querySelectorAll(".qr-box").forEach(function(e){e.style.display="flex";});}})();
 </script>
 </body>
 </html>
