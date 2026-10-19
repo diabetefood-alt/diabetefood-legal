@@ -96,6 +96,9 @@ article li{margin-bottom:8px}
 figure{margin:20px 0}
 figure img{width:100%;height:auto;border-radius:16px;display:block}
 figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:center}
+.qr-box{display:none;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.qr-box img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
+.qr-box p{margin:0;max-width:260px;text-align:left}
 </style>
 </head>
 <body>
@@ -109,7 +112,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <img src="/guides/img/feculents-diabete.webp" width="960" height="540" alt="Assiette divisée en trois parties : une moitié de légumes, un quart de féculents et un quart de protéines, à côté de Zeste, la mascotte orange de DiabeteFood" />
 <figcaption>La méthode de l'assiette : Zeste vous montre la place des féculents.</figcaption>
 </figure>
-<div class="cta"><p>Combien de glucides dans votre plat de pâtes ? Prenez votre assiette en photo avec DiabeteFood : l'app les estime en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a></div>
+<div class="cta"><p>Combien de glucides dans votre plat de pâtes ? Prenez votre assiette en photo avec DiabeteFood : l'app les estime en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903">Essayer DiabeteFood gratuitement</a><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <h2>Pourquoi les féculents comptent autant</h2>
 <p>Les féculents sont riches en amidon, un glucide que le corps transforme en glucose. Ce sont donc eux, avec les produits sucrés, qui font le plus varier la glycémie. Mais ils apportent aussi de l'énergie, des fibres, des vitamines du groupe B et du rassasiement. Les supprimer complètement n'est ni nécessaire ni conseillé sans suivi médical.</p>
 <h2>La méthode de l'assiette</h2>
@@ -172,7 +175,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <li><strong>Cuisinez à l'avance :</strong> riz, pâtes et pommes de terre cuits puis refroidis forment de l'amidon « résistant », qui peut légèrement réduire leur effet sur la glycémie.</li>
 <li><strong>Mélangez :</strong> moitié riz, moitié lentilles, ou des pâtes avec beaucoup de légumes.</li>
 </ul>
-<div class="cta"><p>Pâtes, riz, plats préparés : scannez vos produits et photographiez vos assiettes avec DiabeteFood pour voir en un geste leurs glucides.</p></div>
+<div class="cta"><p>Pâtes, riz, plats préparés : scannez vos produits et photographiez vos assiettes avec DiabeteFood pour voir en un geste leurs glucides.</p><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <div class="buttons">
 <a class="store-btn"
 href="https://apps.apple.com/app/diabetefood/id6764684903"
@@ -216,6 +219,8 @@ Ces informations sont générales et ne remplacent pas l'avis de votre médecin 
 <script>
 // Bouton "Essayer" : Google Play sur Android, App Store sinon. Aucune redirection automatique.
 (function(){var b=document.getElementById("try-btn");if(b&&/android/i.test(navigator.userAgent)){b.href="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr";}})();
+// Sur ordinateur : QR code à scanner à la place du bouton (on ne peut pas installer l'app sur PC).
+(function(){var ua=navigator.userAgent||"";var mob=/android|iphone|ipad|ipod/i.test(ua)||(navigator.maxTouchPoints>1&&/Macintosh/.test(ua));if(!mob){var b=document.getElementById("try-btn");if(b){b.style.display="none";}document.querySelectorAll(".qr-box").forEach(function(e){e.style.display="flex";});}})();
 </script>
 </body>
 </html>
