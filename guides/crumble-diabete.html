@@ -99,6 +99,44 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 .qr-box{display:none;align-items:center;justify-content:center;gap:16px;margin-top:14px}
 .qr-box img{width:120px;height:120px;background:#fff;border-radius:10px;padding:6px}
 .qr-box p{margin:0;max-width:260px;text-align:left}
+.app-box{background:#fff;border:2px solid var(--orange-light);border-radius:20px;padding:18px 16px 20px;box-shadow:0 6px 24px rgba(229,114,42,.12)}
+.app-box .app-kicker{display:inline-flex;align-items:center;gap:8px;margin:0 0 6px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--orange-dark)}
+.app-box .app-kicker img{width:26px;height:26px;border-radius:7px}
+.app-box .app-shot{display:block;width:100%;height:auto;border-radius:14px;margin:6px 0 12px}
+.app-steps{list-style:none;display:flex;gap:8px;margin:0 0 14px;padding:0;text-align:left}
+.app-steps li{flex:1;background:var(--surface-peach);border-radius:12px;padding:8px 10px;font-size:13px;line-height:1.35}
+.app-steps b{display:block;color:var(--orange-dark);font-size:14px}
+.app-box .btn{font-size:17px;padding:14px 26px!important}
+.app-box .app-note{font-size:13px;font-weight:500!important;color:var(--text-muted);margin:10px 0 0!important}
+.app-vid{max-width:230px;margin:6px auto 12px;border:7px solid #1e1814;border-radius:30px;overflow:hidden;box-shadow:0 10px 28px rgba(120,60,20,.25);background:#1e1814}
+.app-vid video{display:block;width:100%;height:auto;aspect-ratio:420/792}
+.app-box .app-vid-cap{font-size:12px;font-weight:600!important;color:var(--text-muted);margin:-4px 0 12px!important}
+.app-sticky{position:fixed;left:10px;right:10px;bottom:10px;z-index:50;display:none;align-items:center;gap:10px;background:#fff;border:1px solid var(--orange-light);border-radius:16px;padding:9px 10px;box-shadow:0 8px 28px rgba(44,24,16,.18);transform:translateY(140%);transition:transform .25s}
+.app-sticky.on{transform:none}
+.app-sticky img{width:38px;height:38px;border-radius:10px}
+.app-sticky span{flex:1;font-size:14px;font-weight:700;line-height:1.2}
+.app-sticky small{display:block;font-weight:500;color:var(--text-muted);font-size:12px}
+.app-sticky a{background:var(--orange-dark);color:#fff;text-decoration:none;font-weight:700;padding:10px 14px;border-radius:12px;font-size:14px;white-space:nowrap}
+.df-pop{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(44,24,16,.55);padding:20px}
+.df-pop.on{display:flex}
+.df-pop-card{position:relative;background:#fff;border-radius:22px;max-width:640px;width:100%;display:flex;gap:22px;align-items:center;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.df-pop-card .app-vid{flex:0 0 180px;margin:0}
+.df-pop-card .df-pop-img{flex:0 0 260px;width:260px;height:auto;border-radius:14px}
+.df-pop-txt h2{margin:0 0 8px;font-size:22px}
+.df-pop-txt p{margin:0 0 12px;color:var(--text-muted);font-size:15px}
+.df-pop-qr{display:flex;align-items:center;gap:12px;margin:8px 0 12px}
+.df-pop-qr img{width:96px;height:96px;background:#fff;border:1px solid var(--orange-light);border-radius:10px;padding:4px}
+.df-pop-qr span{font-size:13px;color:var(--text-muted)}
+.df-pop-links a{color:var(--orange-dark);font-weight:700;text-decoration:none;margin-right:14px;font-size:14px}
+.df-x{position:absolute;top:8px;right:10px;border:0;background:none;font-size:26px;line-height:1;color:var(--text-muted);cursor:pointer;padding:6px}
+.df-slide{position:fixed;left:10px;right:10px;bottom:10px;z-index:60;display:none;align-items:center;gap:12px;background:#fff;border:1px solid var(--orange-light);border-radius:18px;padding:10px 12px;box-shadow:0 10px 32px rgba(44,24,16,.22);transform:translateY(150%);transition:transform .3s}
+.df-slide.on{transform:none}
+.df-slide video,.df-slide .df-slide-img{flex:0 0 62px;width:62px;height:117px;object-fit:cover;border-radius:10px;background:#1e1814}
+.df-slide-txt{flex:1;font-size:14px;font-weight:700;line-height:1.25}
+.df-slide-txt small{display:block;font-weight:500;color:var(--text-muted);font-size:12px;margin:3px 0 8px}
+.df-slide-txt a{display:inline-block;background:var(--orange-dark);color:#fff;text-decoration:none;font-weight:700;padding:9px 14px;border-radius:12px;font-size:14px}
+.df-slide .df-x{top:2px;right:4px;font-size:22px}
+@media (max-width:760px){.app-sticky{display:flex}.df-slide{display:flex}body{padding-bottom:84px}}
 </style>
 </head>
 <body>
@@ -112,7 +150,7 @@ figcaption{font-size:13px;color:var(--text-muted);margin-top:6px;text-align:cent
 <img src="/guides/img/crumble-diabete.webp" width="960" height="540" alt="Les glucides d'une part de crumble aux pommes, avec Zeste, la mascotte orange de DiabeteFood, l'air gourmand" />
 <figcaption>Une part de 100 g, environ 36 g de glucides.</figcaption>
 </figure>
-<div class="cta"><p>Prenez votre assiette en photo avec DiabeteFood pour estimer ses glucides en quelques secondes.</p><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903?pt=128756484&ct=guides&mt=8">Essayer DiabeteFood gratuitement</a><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
+<div class="cta app-box" data-v="video"><p class="app-kicker"><img src="/app-icon.png" width="26" height="26" alt="" />L'appli DiabeteFood</p><p>Prenez votre assiette en photo avec DiabeteFood pour estimer ses glucides en quelques secondes.</p><div class="app-vid"><video data-src="/img/app/app-demo.mp4" poster="/img/app/app-demo.webp" muted loop playsinline preload="none" width="420" height="792" aria-label="Démo de l'app DiabeteFood : scan d'un pot de pâte à tartiner, puis IG 75, score diabète et portion"></video></div><p class="app-vid-cap">Vrai scan dans l'app · IG, glucides et portion en 3 s</p><ul class="app-steps"><li><b>Scannez</b>un produit ou votre assiette</li><li><b>Voyez</b>IG, glucides, score diabète</li><li><b>Ajustez</b>la portion avec Zeste</li></ul><a class="btn" id="try-btn" href="https://apps.apple.com/app/diabetefood/id6764684903?pt=128756484&ct=guides&mt=8">Essayer DiabeteFood gratuitement</a><p class="app-note">Gratuit · iPhone et Android</p><div class="qr-box"><img src="/guides/qr-app.svg" width="120" height="120" alt="QR code pour télécharger l'application DiabeteFood" /><p>Sur ordinateur ? Scannez ce code avec votre téléphone pour télécharger l'app.</p></div></div>
 <h2>Les chiffres</h2>
 <table>
 <tr><th>Portion</th><th>Glucides</th><th>Énergie</th></tr>
@@ -180,5 +218,27 @@ Ces informations sont générales et ne remplacent pas l'avis de votre médecin 
 (function(){var ua=navigator.userAgent||"";var mob=/android|iphone|ipad|ipod/i.test(ua)||(navigator.maxTouchPoints>1&&/Macintosh/.test(ua));if(!mob){var b=document.getElementById("try-btn");if(b){b.style.display="none";}document.querySelectorAll(".qr-box").forEach(function(e){e.style.display="flex";});}})();
 </script>
 <script data-goatcounter="https://diabetefood.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<div class="app-sticky" id="app-sticky"><img src="/app-icon.png" width="38" height="38" alt="" /><span>IG et glucides en 1 scan<small>Gratuit · iPhone & Android</small></span><a id="sticky-btn" href="https://apps.apple.com/app/diabetefood/id6764684903?pt=128756484&ct=guides&mt=8">Essayer</a></div>
+<div class="df-pop" id="df-pop" role="dialog" aria-modal="true" aria-label="Avant de partir : scannez votre prochain repas"><div class="df-pop-card"><button class="df-x" type="button" aria-label="Fermer">×</button><div class="app-vid"><video data-src="/img/app/app-demo.mp4" poster="/img/app/app-demo.webp" muted loop playsinline preload="none" width="420" height="792" aria-hidden="true"></video></div><div class="df-pop-txt"><h2>Avant de partir : scannez votre prochain repas</h2><p>DiabeteFood vous montre en 3 secondes l'IG, les glucides et la bonne portion de ce que vous mangez.</p><div class="df-pop-qr"><img src="/guides/qr-app.svg" width="96" height="96" alt="QR code DiabeteFood" /><span>Scannez ce code avec votre téléphone pour installer l'app gratuite.</span></div><div class="df-pop-links"><a data-pos="popup" href="https://apps.apple.com/app/diabetefood/id6764684903?pt=128756484&ct=guides&mt=8">App Store</a><a data-pos="popup" href="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl=fr&referrer=utm_source%3Ddiabetefood.com%26utm_medium%3Dguides">Google Play</a></div></div></div></div>
+<div class="df-slide" id="df-slide"><video data-src="/img/app/app-demo.mp4" poster="/img/app/app-demo.webp" muted loop playsinline preload="none" aria-hidden="true"></video><div class="df-slide-txt">Scannez avant de manger<small>IG, glucides et portion en 3 s · gratuit</small><a id="slide-btn" data-pos="slide" href="https://apps.apple.com/app/diabetefood/id6764684903?pt=128756484&ct=guides&mt=8">Essayer gratuitement</a></div><button class="df-x" type="button" aria-label="Fermer">×</button></div>
+<script>
+(function(){var ua=navigator.userAgent||"",and=/android/i.test(ua),de=location.pathname.indexOf("/de/")===0;
+var play="https://play.google.com/store/apps/details?id=com.diabetefood.scanner&hl="+(de?"de":"fr")+"&referrer=utm_source%3Ddiabetefood.com%26utm_medium%3D"+(de?"ratgeber":"guides");
+["sticky-btn","slide-btn"].forEach(function(id){var s=document.getElementById(id);if(s&&and){s.href=play;}});
+var bar=document.getElementById("app-sticky");if(bar){var vis=0,f=function(){bar.classList.toggle("on",window.scrollY>450&&!vis&&!window._dfSlide);};
+if(window.IntersectionObserver){var io=new IntersectionObserver(function(es){es.forEach(function(x){x.target._v=x.isIntersecting;});vis=0;document.querySelectorAll(".app-box .btn,.buttons").forEach(function(t){if(t._v)vis=1;});f();});document.querySelectorAll(".app-box .btn,.buttons").forEach(function(t){io.observe(t);});}
+window.addEventListener("scroll",f,{passive:true});f();}
+document.querySelectorAll("video[data-src]").forEach(function(v){var go=function(){if(!v.src){var u=v.getAttribute("data-src");if(!v.canPlayType("video/mp4; codecs=avc1.640028")&&v.canPlayType("video/webm"))u=u.replace(".mp4",".webm");v.src=u;}var p=v.play();if(p&&p.catch)p.catch(function(){});};if(window.IntersectionObserver){new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting)go();else if(v.src)v.pause();});},{rootMargin:"200px"}).observe(v);}else go();});
+var gc=function(p,t){if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:p+location.pathname.replace(/\/$/,""),title:t,event:true});}};
+var ls=function(k,v){try{if(v===undefined)return +localStorage.getItem(k)||0;localStorage.setItem(k,v);}catch(e){return 0;}};var WEEK=6048e5,t0=Date.now();
+var pop=document.getElementById("df-pop");if(pop){var closeP=function(){pop.classList.remove("on");};pop.addEventListener("click",function(e){if(e.target===pop||e.target.closest(".df-x"))closeP();});document.addEventListener("keydown",function(e){if(e.key==="Escape")closeP();});
+var touch=/android|iphone|ipad|ipod/i.test(ua)||navigator.maxTouchPoints>1;
+document.addEventListener("mouseout",function(e){if(touch||window.innerWidth<900||e.relatedTarget||e.clientY>8)return;if(Date.now()-t0<10000||Date.now()-ls("df_pop")<WEEK)return;ls("df_pop",Date.now());pop.classList.add("on");gc("vu-popup","Popup sortie affichée");});}
+var sl=document.getElementById("df-slide");if(sl){var shown=0;sl.querySelector(".df-x").addEventListener("click",function(){sl.classList.remove("on");window._dfSlide=0;if(bar)window.dispatchEvent(new Event("scroll"));});
+window.addEventListener("scroll",function(){if(shown||window.innerWidth>760)return;var d=document.documentElement,r=(window.scrollY+window.innerHeight)/d.scrollHeight;if(r<0.6||Date.now()-ls("df_slide")<WEEK)return;shown=1;ls("df_slide",Date.now());window._dfSlide=1;if(bar)bar.classList.remove("on");sl.classList.add("on");gc("vu-slide","Carte mobile affichée");},{passive:true});}
+document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.href||"";var os=h.indexOf("apps.apple.com")>-1?"ios":h.indexOf("play.google.com")>-1?"android":"";if(!os)return;
+var pos=a.getAttribute("data-pos")||(a.id==="try-btn"?"encadre":a.id==="sticky-btn"?"sticky":"bas");var bx=document.querySelector(".app-box");pos+="-"+(bx&&bx.getAttribute("data-v")||"x");
+if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:"store-"+os+"-"+pos+location.pathname.replace(/\/$/,""),title:"Clic store "+os+" ("+pos+")",event:true});}});})();
+</script>
 </body>
 </html>
