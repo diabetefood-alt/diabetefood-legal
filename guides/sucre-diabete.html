@@ -258,5 +258,15 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
 var pos=a.getAttribute("data-pos")||(a.id==="try-btn"?"encadre":a.id==="sticky-btn"?"sticky":"bas");var bx=document.querySelector(".app-box");pos+="-"+(bx&&bx.getAttribute("data-v")||"x");
 if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:"store-"+os+"-"+pos+location.pathname.replace(/\/$/,""),title:"Clic store "+os+" ("+pos+")",event:true});}});})();
 </script>
+<script id="df-attr">
+(function(){try{var r=document.referrer||"",g=/^https?:\/\/(www\.)?google\./i.test(r),k="df_src";
+try{if(g)sessionStorage.setItem(k,"google");else if(sessionStorage.getItem(k)==="google")g=true;}catch(e){}
+var p=location.pathname,de=p.indexOf("/de/")===0,slug=(p.split("/").filter(Boolean).pop()||"index").replace(/\.html$/,"");
+var src=g?"google":"diabetefood.com",med=g?"organic":(de?"ratgeber":"guides"),camp=(de?"ratgeber-":"guide-")+slug;
+var ref="utm_source="+src+"&utm_medium="+med+"&utm_campaign="+camp;
+document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("referrer",ref);a.href=u.toString();});
+document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("ct",((g?"seo-":"site-")+slug).slice(0,40));a.href=u.toString();});
+}catch(e){}})();
+</script>
 </body>
 </html>
