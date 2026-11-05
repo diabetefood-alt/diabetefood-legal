@@ -422,6 +422,7 @@ if (typeof fbq === "function") { fbq('track', 'Lead'); }
 // Sur ordinateur : QR code à scanner (on ne peut pas installer l'app sur PC).
 (function(){var ua=navigator.userAgent||"";var mob=/android|iphone|ipad|ipod/i.test(ua)||(navigator.maxTouchPoints>1&&/Macintosh/.test(ua));if(!mob){document.querySelectorAll(".qr-box").forEach(function(e){e.style.display="flex";});}})();
 </script>
+<script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.href||"";var os=h.indexOf("apps.apple.com")>-1?"ios":h.indexOf("play.google.com")>-1?"android":"";if(!os)return;var pos=a.id||a.getAttribute("data-pos")||"lien";if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:"store-"+os+"-"+pos+(location.pathname.replace(/\/$/,"")||"/accueil"),title:"Clic store "+os+" ("+pos+")",event:true});}});</script>
 <script data-goatcounter="https://diabetefood.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script id="df-attr">
 (function(){try{var r=document.referrer||"",g=/^https?:\/\/(www\.)?google\./i.test(r),k="df_src";
