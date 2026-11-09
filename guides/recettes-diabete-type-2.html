@@ -260,7 +260,7 @@ var p=location.pathname,de=p.indexOf("/de/")===0,slug=(p.split("/").filter(Boole
 var med=g?"organic":ia?"ai":(de?"ratgeber":"guides"),camp=(de?"ratgeber-":"guide-")+slug;
 var ref="utm_source="+(src||"diabetefood.com")+"&utm_medium="+med+"&utm_campaign="+camp;
 document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("referrer",ref);a.href=u.toString();});
-document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("ct",((g?"seo-":ia?"ia-":"site-")+slug).slice(0,40));a.href=u.toString();});
+document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);var typ=de?"ratgeber":(p.indexOf("/guides")===0?"guides":"accueil");u.searchParams.set("ct",(g?"seo-":ia?"ia-":"site-")+typ);a.href=u.toString();});
 }catch(e){}})();
 </script>
 </body>
