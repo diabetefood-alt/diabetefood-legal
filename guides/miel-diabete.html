@@ -278,13 +278,17 @@ var pos=a.getAttribute("data-pos")||(a.id==="try-btn"?"encadre":a.id==="sticky-b
 if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:"store-"+os+"-"+pos+location.pathname.replace(/\/$/,""),title:"Clic store "+os+" ("+pos+")",event:true});}});})();
 </script>
 <script id="df-attr">
-(function(){try{var r=document.referrer||"",g=/^https?:\/\/(www\.)?google\./i.test(r),k="df_src";
-try{if(g)sessionStorage.setItem(k,"google");else if(sessionStorage.getItem(k)==="google")g=true;}catch(e){}
+(function(){try{var r=(document.referrer||"")+" "+location.search,k="df_src",src="";
+var ai=[["chatgpt","chatgpt.com"],["chatgpt","chat.openai.com"],["perplexity","perplexity.ai"],["gemini","gemini.google.com"],["copilot","copilot.microsoft.com"],["claude","claude.ai"],["mistral","chat.mistral.ai"],["deepseek","chat.deepseek.com"]];
+for(var j=0;j<ai.length;j++){if(r.indexOf(ai[j][1])>-1){src=ai[j][0];break;}}
+if(!src&&/^https?:\/\/(www\.)?google\./i.test(document.referrer))src="google";
+try{if(src)sessionStorage.setItem(k,src);else src=sessionStorage.getItem(k)||"";}catch(e){}
+var g=src==="google",ia=!!src&&!g;
 var p=location.pathname,de=p.indexOf("/de/")===0,slug=(p.split("/").filter(Boolean).pop()||"index").replace(/\.html$/,"");
-var src=g?"google":"diabetefood.com",med=g?"organic":(de?"ratgeber":"guides"),camp=(de?"ratgeber-":"guide-")+slug;
-var ref="utm_source="+src+"&utm_medium="+med+"&utm_campaign="+camp;
+var med=g?"organic":ia?"ai":(de?"ratgeber":"guides"),camp=(de?"ratgeber-":"guide-")+slug;
+var ref="utm_source="+(src||"diabetefood.com")+"&utm_medium="+med+"&utm_campaign="+camp;
 document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("referrer",ref);a.href=u.toString();});
-document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("ct",((g?"seo-":"site-")+slug).slice(0,40));a.href=u.toString();});
+document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("ct",((g?"seo-":ia?"ia-":"site-")+slug).slice(0,40));a.href=u.toString();});
 }catch(e){}})();
 </script>
 </body>
