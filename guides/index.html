@@ -268,6 +268,7 @@ aria-label="Télécharger DiabeteFood sur Google Play Android">
 <p style="margin-top: 12px; font-size: 11px; opacity: 0.7;">DiabeteFood est un outil d'information. Il ne remplace pas l'avis d'un professionnel de santé.</p>
 </footer>
 </main>
+<script>document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.href||"";var os=h.indexOf("apps.apple.com")>-1?"ios":h.indexOf("play.google.com")>-1?"android":"";if(!os)return;var pos=a.id||a.getAttribute("data-pos")||"lien";if(window.goatcounter&&window.goatcounter.count){window.goatcounter.count({path:"store-"+os+"-"+pos+(location.pathname.replace(/\/$/,"")||"/accueil"),title:"Clic store "+os+" ("+pos+")",event:true});}});</script>
 <script data-goatcounter="https://diabetefood.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script id="df-attr">
 (function(){try{var r=document.referrer||"",g=/^https?:\/\/(www\.)?google\./i.test(r),k="df_src";
