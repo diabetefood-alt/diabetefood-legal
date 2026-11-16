@@ -275,10 +275,10 @@ if(!src&&/^https?:\/\/(www\.)?google\./i.test(document.referrer))src="google";
 try{if(src)sessionStorage.setItem(k,src);else src=sessionStorage.getItem(k)||"";}catch(e){}
 var g=src==="google",ia=!!src&&!g;
 var p=location.pathname,de=p.indexOf("/de/")===0,slug=(p.split("/").filter(Boolean).pop()||"index").replace(/\.html$/,"");
-var med=g?"organic":ia?"ai":(de?"ratgeber":"guides"),camp=(de?"ratgeber-":"guide-")+slug;
+var typ=de?"ratgeber":(p.indexOf("/guides")===0?"guides":(slug==="app"?"app":"accueil"));var med=g?"organic":ia?"ai":"site",camp=typ;
 var ref="utm_source="+(src||"diabetefood.com")+"&utm_medium="+med+"&utm_campaign="+camp;
 document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("referrer",ref);a.href=u.toString();});
-document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);var typ=de?"ratgeber":(p.indexOf("/guides")===0?"guides":"accueil");u.searchParams.set("ct",(g?"seo-":ia?"ia-":"site-")+typ);a.href=u.toString();});
+document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){var u=new URL(a.href);u.searchParams.set("ct",(g?"seo-":ia?"ia-":"site-")+typ);a.href=u.toString();});
 }catch(e){}})();
 </script>
 </body>
